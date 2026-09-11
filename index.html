@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<!-- GENERADO desde src/paginas/index.html — NO EDITAR A MANO: edita la fuente y ejecuta `node herramientas/construye.mjs` (desde webs/jocovi) -->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Carpintería de madera en Alcalá de Guadaíra (Sevilla). Armarios empotrados, vestidores y muebles a medida en madera maciza. Calcula tu presupuesto online." />
+<title>Carpintería en Sevilla · Armarios y muebles a medida | JOCOVI</title>
+<link rel="canonical" href="https://jocovi.es/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:site_name" content="JOCOVI" />
+<meta property="og:title" content="Carpintería en Sevilla · Armarios y muebles a medida | JOCOVI" />
+<meta property="og:description" content="Armarios empotrados, vestidores, muebles a medida y puertas de madera en Sevilla. Taller propio en Alcalá de Guadaíra." />
+<meta property="og:url" content="https://jocovi.es/" />
+<!-- TODO antes de producción: crear og-jocovi.jpg (1200×630, foto real de un armario) en public/ -->
+<meta property="og:image" content="https://jocovi.es/og-jocovi.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#1C1714;
+    --bg-2:#241D18;
+    --panel:#F4EFE6;
+    --panel-2:#EDE4D4;
+    --cream:#EDE6D8;
+    --muted:#A79B87;
+    --gold:#C9A24B;
+    --gold-2:#BE833C;
+    --tan:#F3D395;
+    --brown:#3A2E1C;
+    --brown-2:#562B0C;
+    --wa:#008069;
+    --wa-bubble:#D9FDD3;
+    --line:rgba(201,162,75,.30);
+    /* Alphas del oro (única fuente del triplete 201,162,75; --line es la de .30) */
+    --gold-a12:rgba(201,162,75,.12);
+    --gold-a14:rgba(201,162,75,.14);
+    --gold-a15:rgba(201,162,75,.15);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;overflow-x:clip;}
+  body{font-family:'Jost',system-ui,sans-serif;font-weight:300;color:var(--cream);background:var(--bg);line-height:1.7;overflow-x:clip;}
+  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.08;letter-spacing:.3px;}
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1160px;margin-inline:auto;padding-inline:28px;}
+  .eyebrow{font-family:'Jost';font-weight:500;letter-spacing:4px;text-transform:uppercase;font-size:12px;color:var(--gold);}
+
+  /* Ornamento */
+  .orn{display:flex;align-items:center;justify-content:center;gap:14px;margin:22px 0;}
+  .orn::before,.orn::after{content:"";height:1px;width:56px;background:var(--line);}
+  .orn i{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);display:block;}
+  .orn.dark::before,.orn.dark::after{background:rgba(86,43,12,.28);}
+  .orn.left{justify-content:flex-start;margin-left:0;}
+  .orn.left::before{display:none;}
+
+  /* Botones */
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:'Jost';font-weight:500;font-size:14px;
+    letter-spacing:1.5px;text-transform:uppercase;padding:15px 30px;transition:all .2s;border:1px solid transparent;cursor:pointer;}
+  .btn-gold{background:var(--gold);color:#20180f;}
+  .btn-gold:hover{background:var(--tan);}
+  .btn-ghost{border-color:var(--gold);color:var(--gold);background:transparent;}
+  .btn-ghost:hover{background:var(--gold);color:#20180f;}
+  .btn-ghost-dark{border-color:var(--brown-2);color:var(--brown-2);background:transparent;}
+  .btn-ghost-dark:hover{background:var(--brown-2);color:var(--panel);}
+  .btn-wa{background:var(--wa);color:#fff;border-color:var(--wa);}
+  .btn-wa:hover{background:#00a884;border-color:#00a884;}
+  .wa-ico{width:18px;height:18px;flex:none;}
+
+  /* Header */
+  header.site{position:sticky;top:0;z-index:50;background:rgba(28,23,20,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--gold-a14);}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0;}
+  .logo-img{height:54px;width:auto;display:block;border-radius:6px;}
+  /* Wordmark de texto (sustituye a la imagen del logo) */
+  .logo-word{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:30px;letter-spacing:5px;
+    text-transform:uppercase;color:var(--cream);line-height:1;display:inline-block;transition:color .2s;}
+  .logo-word:hover{color:var(--gold);}
+  .foot-word{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:34px;letter-spacing:6px;
+    text-transform:uppercase;color:var(--brown-2);line-height:1;display:inline-block;}
+  .navlinks{display:flex;align-items:center;gap:34px;}
+  .navlinks a{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cream);font-weight:400;transition:color .2s;min-height:40px;display:inline-flex;align-items:center;}
+  .navlinks a:hover{color:var(--gold);}
+  .nav-cta{display:inline-flex;}
+
+  /* Hero */
+  .hero{position:relative;min-height:94vh;display:flex;align-items:center;
+    background:linear-gradient(180deg,rgba(20,16,13,.55),rgba(20,16,13,.82)),url('https://images.unsplash.com/photo-1601058268499-e52658b8bb88?w=1600&q=80&auto=format&fit=crop') center/cover no-repeat;}
+  .hero-inner{max-width:720px;}
+  .hero h1{font-size:clamp(46px,7vw,88px);color:#fff;margin:14px 0 8px;font-weight:600;}
+  .hero h1 em{font-style:italic;color:var(--tan);}
+  .hero p{font-size:19px;color:#e6ddcd;max-width:520px;margin-top:16px;font-weight:300;}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px;}
+  .hero-trust{list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;
+    font-size:13.5px;font-weight:300;color:#e6ddcd;letter-spacing:.3px;}
+  .hero-trust li{display:flex;align-items:center;gap:9px;}
+  .hero-trust li::before{content:"";width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex:none;}
+
+  /* Secciones */
+  section{padding:110px 0;}
+  .center{text-align:center;}
+  .sec-title{font-size:clamp(34px,4.6vw,58px);}
+  .lead-lg{font-size:22px;font-weight:300;line-height:1.75;color:var(--cream);max-width:760px;margin:0 auto;}
+
+  /* Manifiesto */
+  .manifesto{background:var(--bg);}
+  .manifesto .eyebrow{display:block;text-align:center;}
+
+  /* Panel claro */
+  .light{background:var(--panel);color:var(--brown);}
+  .light .eyebrow{color:var(--gold-2);}
+  .light .sec-title{color:var(--brown-2);}
+  .light .muted{color:#6f6353;}
+
+  /* Servicios */
+  .services-head{text-align:center;margin-bottom:60px;}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid rgba(86,43,12,.16);}
+  .svc{padding:44px 36px;border-right:1px solid rgba(86,43,12,.16);position:relative;transition:background .2s;}
+  .svc:last-child{border-right:none;}
+  .svc:hover{background:var(--panel-2);}
+  .svc .num{font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--gold-2);line-height:1;}
+  .svc h3{font-size:30px;color:var(--brown-2);margin:14px 0 12px;}
+  .svc p{color:#6f6353;font-size:15.5px;font-weight:400;}
+  .svc.feature{background:var(--brown-2);color:var(--panel);}
+  .svc.feature:hover{background:#4a2409;}
+  .svc.feature .num,.svc.feature h3{color:var(--tan);}
+  .svc.feature p{color:#e8dcc7;}
+  .svc .tag{position:absolute;top:18px;right:18px;font-family:'Jost';font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--tan);border:1px solid rgba(243,211,149,.5);padding:3px 9px;border-radius:20px;}
+
+  /* Galería */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .gitem{position:relative;overflow:hidden;}
+  .gitem img{width:100%;height:300px;object-fit:cover;transition:transform .5s;background:var(--bg-2);}
+  .gitem:hover img{transform:scale(1.07);}
+  .gitem figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;color:#fff;
+    font-family:'Cormorant Garamond',serif;font-size:20px;background:linear-gradient(transparent,rgba(20,16,13,.82));}
+
+  /* Feature madera */
+  .feature{background:var(--bg-2);}
+  .feature-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;}
+  .feature img{width:100%;height:460px;object-fit:cover;}
+  .feature h2{font-size:clamp(32px,4.4vw,52px);color:#fff;margin-bottom:10px;}
+  .feature p{color:var(--muted);margin-bottom:16px;font-weight:300;font-size:16.5px;}
+  .feature ul{list-style:none;margin-top:20px;display:grid;gap:12px;}
+  .feature li{display:flex;gap:12px;align-items:flex-start;color:var(--cream);font-weight:300;}
+  .feature li::before{content:"";width:7px;height:7px;background:var(--gold);transform:rotate(45deg);margin-top:9px;flex:none;}
+
+  /* WhatsApp component */
+  .wa-phone{width:328px;background:#0b141a;border-radius:32px;padding:9px;box-shadow:0 24px 55px rgba(0,0,0,.4);}
+  .wa-screen{border-radius:24px;overflow:hidden;background:#efeae2;}
+  .wa-status{background:var(--wa);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:6px 16px 2px;font-size:12px;font-weight:600;font-family:'Jost';}
+  .wa-status .icons{display:flex;gap:5px;font-size:11px;}
+  .wa-head{background:var(--wa);color:#fff;display:flex;align-items:center;gap:10px;padding:8px 12px 12px;font-family:'Jost';}
+  .wa-head .back{font-size:22px;line-height:1;}
+  .wa-head .av{width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--brown);display:grid;place-items:center;font-weight:700;font-size:15px;flex:none;}
+  .wa-head .who{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;}
+  .wa-name{font-weight:600;font-size:16px;line-height:1.15;}
+  .wa-sub{font-size:12px;opacity:.85;}
+  .wa-head .hicons{display:flex;gap:15px;font-size:16px;opacity:.95;}
+  .wa-body{background-color:#efeae2;background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1px);background-size:18px 18px;padding:16px 12px;display:flex;flex-direction:column;gap:8px;min-height:330px;font-family:'Jost';}
+  .wa-day{align-self:center;background:#fff;color:#54656f;font-size:11px;font-weight:600;padding:4px 12px;border-radius:8px;box-shadow:0 1px 1px rgba(0,0,0,.08);margin-bottom:4px;}
+  .wa-in,.wa-out{max-width:82%;padding:6px 9px 5px;border-radius:9px;font-size:14px;line-height:1.36;color:#111b21;position:relative;box-shadow:0 1px 1px rgba(0,0,0,.13);font-weight:400;}
+  .wa-in{align-self:flex-start;background:#fff;border-top-left-radius:2px;}
+  .wa-out{align-self:flex-end;background:#d9fdd3;border-top-right-radius:2px;}
+  .wa-t{display:block;text-align:right;font-size:10.5px;color:#667781;margin-top:2px;line-height:1;}
+  .wa-t .tick{color:#53bdeb;font-size:12px;margin-left:2px;letter-spacing:-2px;}
+  .wa-input{display:flex;align-items:center;gap:8px;padding:8px 10px;background:#efeae2;}
+  .wa-input .field{flex:1;background:#fff;border-radius:20px;padding:9px 14px;color:#8696a0;font-size:13px;font-family:'Jost';}
+  .wa-input .send{width:36px;height:36px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;font-size:16px;flex:none;}
+
+  .phones{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;}
+
+  /* Presupuesto (calculadora) */
+  .presupuesto{background:var(--bg-2);}
+  .presu-head{text-align:center;margin-bottom:44px;}
+  .presu-box{max-width:760px;margin:0 auto;}
+  .chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:26px;}
+  .chip{font-family:'Jost';font-weight:400;font-size:13.5px;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;min-height:44px;
+    border:1px solid var(--line);background:transparent;color:var(--cream);cursor:pointer;transition:all .2s;}
+  .chip:hover,.chip:focus-visible{border-color:var(--gold);color:var(--gold);}
+  .chip[aria-pressed="true"]{background:var(--gold);color:#20180f;border-color:var(--gold);}
+  .presu-field{display:block;width:100%;background:rgba(0,0,0,.25);border:1px solid var(--line);color:var(--cream);
+    font-family:'Jost';font-weight:300;font-size:16px;padding:14px;line-height:1.6;transition:border-color .2s;}
+  textarea.presu-field{min-height:130px;resize:vertical;}
+  .presu-field:focus-visible,.tarjeta input:focus-visible,.tarjeta select:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+  .presu-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:10px 0 18px;font-size:13px;color:var(--muted);}
+  .tarjeta{border:1px solid var(--line);padding:18px;margin-bottom:14px;background:rgba(0,0,0,.18);}
+  .tarjeta h3{font-size:24px;color:var(--tan);margin-bottom:12px;}
+  .tarjeta .campos{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;}
+  .tarjeta label{display:block;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;font-family:'Jost';font-weight:400;}
+  .tarjeta input,.tarjeta select{width:100%;background:rgba(0,0,0,.25);border:1px solid var(--line);color:var(--cream);font-family:'Jost';font-weight:300;font-size:15px;padding:10px;min-height:44px;}
+  .tarjeta .falta input,.tarjeta .falta select{border-color:var(--gold-2);}
+  .pregunta{color:var(--tan);font-size:14.5px;margin:12px 0 6px;}
+  .rango-big{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(38px,6vw,62px);color:#fff;line-height:1.1;}
+  .rango-nota{color:var(--muted);font-size:14px;margin-top:8px;}
+  .desglose{list-style:none;margin:26px 0 0;display:grid;gap:2px;}
+  .desglose li{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 14px;border-bottom:1px solid var(--gold-a15);padding:9px 0;font-size:15px;}
+  .desglose .d-tit{color:var(--cream);}
+  .desglose .d-det{color:var(--muted);font-size:13.5px;flex-basis:100%;}
+  .desglose .d-rng{color:var(--tan);white-space:nowrap;}
+  .descargo{font-size:12.5px;color:var(--muted);margin-top:20px;line-height:1.65;}
+  .presu-acciones{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;}
+  .aviso{border:1px solid var(--gold-2);padding:14px 16px;color:var(--tan);font-size:15px;margin:16px 0;}
+  .oculto{display:none!important;}
+  .hp-campo{position:absolute;left:-9999px;top:-9999px;height:1px;width:1px;overflow:hidden;}
+
+  /* Audio: grabar en vez de escribir */
+  .audio-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 18px;}
+  .btn-audio{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:500;font-size:13px;letter-spacing:1px;
+    text-transform:uppercase;padding:11px 18px;min-height:44px;border:1px solid var(--line);background:transparent;color:var(--cream);cursor:pointer;transition:all .2s;}
+  .btn-audio:hover,.btn-audio:focus-visible{border-color:var(--gold);color:var(--gold);}
+  .btn-audio .rec-dot{width:10px;height:10px;border-radius:50%;background:#e5687a;flex:none;transition:background .2s;}
+  .btn-audio:hover .rec-dot{background:#e5484d;}
+  .btn-audio.grabando{border-color:#e5484d;color:#ffc2c4;}
+  .btn-audio.grabando .rec-dot{background:#e5484d;animation:pulso 1s ease-in-out infinite;}
+  @keyframes pulso{0%,100%{opacity:1;}50%{opacity:.2;}}
+  .audio-estado{font-size:13px;color:var(--muted);flex:1 1 220px;min-width:0;}
+
+  /* Paso: recibir el presupuesto por email (captura de lead) */
+  .lead-box .eyebrow{display:block;}
+  .lead-intro{color:var(--cream);font-size:16px;margin:10px 0 20px;}
+  .lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .lead-grid .full{grid-column:1/-1;}
+  .lead-box label.campo-lab,.lead-box .lead-grid label{display:block;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;font-family:'Jost';font-weight:400;}
+  .lead-box input[type=text],.lead-box input[type=email],.lead-box input[type=tel]{width:100%;background:rgba(0,0,0,.25);border:1px solid var(--line);
+    color:var(--cream);font-family:'Jost';font-weight:300;font-size:15px;padding:12px;min-height:44px;}
+  .lead-box input:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+  .lead-consent{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:13.5px;color:var(--muted);line-height:1.55;cursor:pointer;}
+  .lead-consent input{margin-top:2px;flex:none;width:18px;height:18px;accent-color:var(--gold);}
+  .lead-consent a{color:var(--tan);text-decoration:underline;}
+  .lead-ok{border:1px solid var(--gold);padding:22px;color:var(--tan);font-size:16.5px;text-align:center;line-height:1.6;}
+  .lead-box.enviado > .eyebrow,.lead-box.enviado > .lead-intro,.lead-box.enviado #presu-lead-form{display:none;}
+  @media (max-width:520px){ .lead-grid{grid-template-columns:1fr;} }
+
+  /* FAQ */
+  .faq-list{max-width:760px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid rgba(86,43,12,.16);}
+  .faq-item summary{cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;color:var(--brown-2);padding:18px 34px 18px 0;list-style:none;position:relative;min-height:44px;transition:color .2s;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);color:var(--gold-2);font-size:26px;font-family:'Jost';font-weight:300;}
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item summary:hover,.faq-item summary:focus-visible{color:var(--gold-2);}
+  .faq-item p{color:#6f6353;font-weight:400;font-size:15.5px;padding:0 0 20px;max-width:66ch;}
+  .faq-item p a{color:var(--gold-2);text-decoration:underline;}
+
+  /* Contacto */
+  .contact{background:var(--bg);}
+  .contact-grid{display:grid;grid-template-columns:1fr auto;gap:70px;align-items:center;}
+  .contact h2{font-size:clamp(34px,4.6vw,58px);color:#fff;margin-bottom:8px;}
+  .contact p{color:var(--muted);font-size:18px;font-weight:300;max-width:440px;}
+  .contact .meta{margin-top:30px;display:grid;gap:12px;font-weight:300;}
+  .contact .meta a,.contact .meta span{display:inline-flex;align-items:center;gap:12px;color:var(--cream);min-height:44px;}
+  .contact .meta a:hover{color:var(--gold);}
+  .contact .meta b{color:var(--gold);font-weight:500;font-family:'Jost';letter-spacing:1px;}
+
+  /* Footer */
+  footer.site{background:#15110e;color:var(--muted);padding:56px 0 34px;border-top:1px solid var(--gold-a12);}
+  .foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center;}
+  .foot-logo{height:60px;border-radius:6px;}
+  .foot-links{display:flex;gap:26px;flex-wrap:wrap;font-size:13px;letter-spacing:1px;text-transform:uppercase;}
+  .foot-links a{min-height:44px;display:inline-flex;align-items:center;}
+  .foot-links a:hover{color:var(--gold);}
+  .foot small{display:block;margin-top:24px;font-size:12.5px;color:#7c705d;letter-spacing:.4px;}
+
+  /* WhatsApp flotante */
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px rgba(37,211,102,.5);transition:transform .18s;}
+  .wa-float:hover{transform:scale(1.08);}
+  .wa-float svg{width:32px;height:32px;}
+
+  @media (max-width:900px){
+    .svc-grid{grid-template-columns:1fr;}
+    .svc{border-right:none;border-bottom:1px solid rgba(86,43,12,.16);}
+    .gallery-grid{grid-template-columns:1fr 1fr;}
+    .feature-grid,.contact-grid{grid-template-columns:1fr;gap:40px;}
+    .feature img{height:320px;}
+    .navlinks,.nav-cta{display:none;}
+    section{padding:76px 0;}
+  }
+  @media (max-width:520px){
+    .gallery-grid{grid-template-columns:1fr;}
+  }
+
+  /* ===================================================================
+     REDISEÑO CLARO · muro de puertas en movimiento (jul 2026)
+     Para REVERTIR del todo: restaurar webs/jocovi/index-premium-oscuro.bak.html
+     (o borrar este bloque + la línea <div class="hero-doors"> del hero).
+     =================================================================== */
+  /* ---------- Cabecera-píldora (pieza del taller, clonada de bexpat-2) ----------
+     Arriba del todo ocupa el ancho completo y es transparente sobre el vídeo; al bajar se
+     contrae en una cápsula flotante con fondo y desenfoque. Medidas del código real de
+     bexpat-2 (que a su vez las midió de volcanz.digital): 1500→1180px de ancho, hueco
+     superior 12px, transición .5s cubic-bezier(.4,0,.2,1).
+     La clave de que se vea fluido es animar entre DOS anchos finitos y cercanos; desde un
+     max-width gigante, media transición no se ve y luego pega un acelerón. */
+  /* ⚠️ El estado BASE es la barra sólida: es lo que ve quien no tiene JS. Si el
+     transparente fuera lo de por defecto, sin JS nadie añadiría .desplazada al bajar y el
+     texto en claro quedaría sobre las secciones crema, ilegible. El script pone .arriba
+     (transparente sobre el vídeo) o .desplazada (píldora); sin él, barra sólida y ya. */
+  header.site{
+    position:sticky;top:0;z-index:100;
+    background:#F7F2E9;border-bottom:1px solid rgba(120,90,50,.16);
+    backdrop-filter:blur(10px);padding-inline:0;
+    transition:padding .5s cubic-bezier(.4,0,.2,1),margin .5s cubic-bezier(.4,0,.2,1);
+  }
+  header.site .nav{
+    max-width:1160px;margin-inline:auto;padding:14px 28px;
+    background:transparent;border:1px solid transparent;border-radius:999px;
+    backdrop-filter:blur(0px);-webkit-backdrop-filter:blur(0px);
+    transition:max-width .5s cubic-bezier(.4,0,.2,1),padding .5s cubic-bezier(.4,0,.2,1),
+      background .5s cubic-bezier(.4,0,.2,1),border-color .5s cubic-bezier(.4,0,.2,1),
+      box-shadow .5s cubic-bezier(.4,0,.2,1),backdrop-filter .5s cubic-bezier(.4,0,.2,1),
+      -webkit-backdrop-filter .5s cubic-bezier(.4,0,.2,1);
+  }
+  /* El hueco superior va como PADDING de la cabecera: un margin-top del hijo se colapsa
+     con la cabecera sticky y no se ve. El margin-bottom negativo compensa la altura para
+     que la página no dé un salto al aparecer la píldora. */
+  header.site.arriba{background:transparent;border-bottom-color:transparent;backdrop-filter:none;}
+  header.site.desplazada{padding:12px 12px 0;margin-bottom:-12px;background:transparent;border-bottom-color:transparent;backdrop-filter:none;}
+  header.site.desplazada .nav{
+    max-width:980px;padding:8px 26px;
+    background:rgba(247,242,233,.95);
+    backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);
+    border-color:rgba(120,90,50,.18);
+    box-shadow:0 18px 40px -20px rgba(58,46,28,.45);
+  }
+  /* Arriba del todo la barra flota sobre el vídeo: en claro hasta que nace la píldora */
+  header.site.arriba .logo-word{color:#fff;text-shadow:0 2px 18px rgba(20,14,8,.6);}
+  header.site.arriba .logo-word:hover{color:var(--tan);}
+  header.site.arriba .navlinks a{color:rgba(255,255,255,.86);text-shadow:0 1px 12px rgba(20,14,8,.65);}
+  header.site.arriba .navlinks a:hover{color:var(--tan);}
+  header.site.arriba .btn-ghost{border-color:rgba(243,211,149,.6);color:#f7ecd7;}
+  header.site.arriba .btn-ghost:hover{background:var(--tan);color:#2a1c0c;border-color:var(--tan);}
+  /* Ya con la píldora, vuelve a los tonos del tema claro */
+  .logo-word{color:#43290F;}
+  .logo-word:hover{color:var(--gold-2);}
+  .navlinks a{color:#5b4a34;}
+  .navlinks a:hover{color:var(--gold-2);}
+  header.site .btn-ghost{border-color:var(--gold-2);color:var(--gold-2);}
+  header.site .btn-ghost:hover{background:var(--gold-2);color:#fff;}
+  @media (prefers-reduced-motion:reduce){ header.site, header.site .nav{transition:none;} }
+
+  /* Hero: mosaico de puertas a la deriva + texto flotando encima */
+  .hero{min-height:94vh;background:#EFE7D6;overflow:hidden;isolation:isolate;padding:0;}
+  /* El vídeo tiene que llegar al borde superior, así que el hero se mete DEBAJO de la
+     cabecera (que es sticky y transparente) y recupera el hueco con el padding. El alto
+     exacto lo mide el JS en --h-cabecera; el valor de reserva va con holgura porque
+     quedarse corto deja asomar una raya del fondo crema sobre el vídeo y pasarse no se nota. */
+  .hero:is(.con-video, :has(.hero-video)){
+    margin-top:calc(-1 * var(--h-cabecera, 6.5rem));
+    padding-top:var(--h-cabecera, 6.5rem);}
+  .hero-doors{position:absolute;inset:-12%;z-index:-2;pointer-events:none;
+    background-image:url('doors.svg');
+    background-repeat:repeat;background-size:360px 298px;
+    animation:derivaPuertas 100s linear infinite;will-change:background-position;}
+  @keyframes derivaPuertas{from{background-position:0 0;}to{background-position:0 298px;}}
+  /* Velo claro para que el texto flote legible sobre las puertas */
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background:radial-gradient(125% 95% at 20% 40%, rgba(250,247,240,.94) 0%, rgba(248,243,234,.74) 40%, rgba(244,238,226,.28) 74%, rgba(240,233,219,0) 100%);}
+
+  /* Vídeo del oficio sobre el muro de puertas (ago 2026).
+     Las puertas NO se van: son la capa de debajo, y el vídeo entra fundiéndose encima
+     cuando de verdad puede reproducirse. Si el vídeo falla, si no hay JS o si el
+     usuario pide menos movimiento, el hero queda exactamente como antes. */
+  .hero-video{position:absolute;inset:0;z-index:-2;width:100%;height:100%;
+    object-fit:cover;pointer-events:none;transition:opacity 1.4s ease;}
+  .hero-video.esperando{opacity:0;}
+  /* ⚠️ Aquí hubo un velo CREMA denso (radial + cortina lateral) para poder mantener el
+     texto oscuro del rediseño claro. Cumplía el contraste pero lavaba el vídeo hasta
+     dejarlo casi invisible —lo cazó Coco— y es justo lo que avisa la ficha de la pieza:
+     un velo global no es la solución. Ahora el hero hace lo mismo que bexpat-2: el vídeo
+     va casi limpio y el texto pasa a CLARO, que es lo que aguanta cualquier fotograma.
+     El velo solo cumple dos funciones: asentar un poco la imagen y fundir el pie con el
+     crema del manifiesto para coser el hero con la sección de abajo. */
+  .hero:is(.con-video, :has(.hero-video))::before{
+    background:linear-gradient(180deg,
+      rgba(28,23,20,.60) 0%, rgba(28,23,20,.44) 26%, rgba(28,23,20,.46) 58%,
+      rgba(28,23,20,.52) 86%, rgba(60,48,34,.60) 94%, rgba(214,203,182,.90) 99%, #F4EEE2 100%);}
+
+  /* Texto del hero sobre el vídeo: claro, con sombra de dos capas (una corta y otra muy
+     difusa) en los titulares y PASTILLA CON DESENFOQUE bajo el cuerpo y la línea de
+     confianza. La pastilla es lo único que aguanta un fotograma claro —el vestidor
+     blanco del final— sin tener que apagar el vídeo. */
+  .hero:is(.con-video, :has(.hero-video)) h1{
+    color:#fff;text-shadow:0 2px 10px rgba(20,14,8,.55), 0 2px 40px rgba(20,14,8,.65);}
+  .hero:is(.con-video, :has(.hero-video)) h1 em{color:var(--tan);}
+  /* El texto pequeño (12-14px) necesita 4,5 de contraste y eso NO lo da ninguna sombra
+     sobre un fotograma cualquiera: va sobre fondo propio. El rótulo lleva su chip y el
+     cuerpo y la línea de confianza comparten pastilla. */
+  .hero:is(.con-video, :has(.hero-video)) .eyebrow{
+    display:inline-block;color:var(--tan);
+    background:rgba(28,23,20,.60);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    border:1px solid rgba(243,211,149,.22);border-radius:999px;padding:7px 14px;}
+  .hero:is(.con-video, :has(.hero-video)) .hero-pastilla{
+    display:inline-block;margin-top:16px;padding:18px 22px;
+    background:rgba(28,23,20,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    border:1px solid rgba(243,211,149,.20);border-radius:14px;}
+  .hero:is(.con-video, :has(.hero-video)) .hero-pastilla p{color:#f2ebdd;margin-top:0;}
+  /* La línea de confianza va después de los botones (no se reordena: ese orden ya estaba
+     dado por bueno), así que lleva su propia pastilla en vez de compartir la del cuerpo. */
+  .hero:is(.con-video, :has(.hero-video)) .hero-trust{
+    color:#ece3d2;margin-top:26px;padding:11px 16px;width:fit-content;
+    background:rgba(28,23,20,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    border:1px solid rgba(243,211,149,.18);border-radius:999px;}
+  @media (max-width:900px){
+    /* en móvil la lista se apila y cae sobre los planos más claros del final: necesita
+       algo más de cuerpo que en escritorio (medido: 3,90 con .55) */
+    .hero:is(.con-video, :has(.hero-video)) .hero-trust{border-radius:14px;background:rgba(28,23,20,.68);}
+  }
+  .hero:is(.con-video, :has(.hero-video)) .hero-trust li::before{background:var(--tan);}
+  /* el botón fantasma vuelve a su versión sobre oscuro (el rediseño claro lo pasó a marrón) */
+  .hero:is(.con-video, :has(.hero-video)) .btn-ghost{border-color:rgba(243,211,149,.55);color:#f7ecd7;}
+  .hero:is(.con-video, :has(.hero-video)) .btn-ghost:hover{background:var(--tan);color:#2a1c0c;border-color:var(--tan);}
+  .hero-inner{position:relative;z-index:1;}
+  /* El dorado de marca a 12px no llegaba a AA sobre el fondo claro (medido: 2,75) y con
+     vídeo detrás baja más. En el hero usa el dorado oscuro del botón fantasma. */
+  .hero .eyebrow{color:#7a5a2e;}
+  .hero h1{color:#38270F;text-shadow:0 1px 0 rgba(255,255,255,.55);}
+  .hero h1 em{color:var(--gold-2);font-style:italic;}
+  .hero p{color:#5b4a34;}
+  .hero-trust{color:#6b5a42;}
+  .hero-trust li::before{background:var(--gold-2);}
+  .hero .btn-ghost{border-color:#7a5a2e;color:#5b4327;}
+  .hero .btn-ghost:hover{background:#7a5a2e;color:#fff;}
+
+  /* Manifiesto claro (continúa el tono del hero) */
+  .manifesto{background:#F4EEE2;}
+  .manifesto .eyebrow{color:var(--gold-2);}
+  .manifesto .lead-lg{color:#4a3c28;}
+  .manifesto .orn::before,.manifesto .orn::after{background:rgba(120,90,50,.28);}
+
+  @media (prefers-reduced-motion: reduce){ .hero-doors{animation:none;} }
+</style>
+<!-- Datos estructurados del negocio. El teléfono es el MISMO placeholder deliberado
+     que el resto de la web: se sustituye junto a los CTA cuando Jorge dé el real.
+     NO añadir aggregateRating/review mientras las opiniones sean recreadas. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://jocovi.es/#negocio",
+  "name": "JOCOVI · Carpintería de madera",
+  "url": "https://jocovi.es/",
+  "image": "https://jocovi.es/og-jocovi.jpg",
+  "logo": "https://jocovi.es/logo_jocovi.svg",
+  "telephone": "+34000000000",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Alcalá de Guadaíra",
+    "addressRegion": "Sevilla",
+    "postalCode": "41500",
+    "addressCountry": "ES"
+  },
+  "areaServed": ["Sevilla", "Alcalá de Guadaíra", "Dos Hermanas", "Mairena del Alcor", "El Viso del Alcor", "Utrera", "Carmona"],
+  "priceRange": "€€",
+  "founder": { "@type": "Person", "name": "Jorge Coco Villalba" },
+  "knowsAbout": ["armarios a medida", "armarios empotrados", "vestidores", "muebles a medida", "puertas de madera", "ebanistería"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta un armario empotrado a medida?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Depende del tamaño, los materiales y el interior. Como referencia de mercado, la mayoría de armarios empotrados a medida se mueven entre 700 y 2.200 €, y un vestidor completo puede ir de 1.500 € a más de 6.000 €. Para tu caso concreto, nuestra calculadora online te da una horquilla al momento, sin dejar tus datos." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto se tarda en fabricar e instalar un armario a medida?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cada proyecto es distinto: tras la visita para tomar medidas te damos un plazo cerrado. Lo habitual es de 2 a 6 semanas entre el encargo y la instalación, que normalmente se resuelve en uno o dos días." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajáis fuera de Alcalá de Guadaíra?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. El taller está en Alcalá de Guadaíra y trabajamos en toda Sevilla y su área: Sevilla capital, Dos Hermanas, Mairena del Alcor, El Viso del Alcor, Utrera, Carmona y alrededores." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Melamina o madera maciza: qué me conviene?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La melamina es más económica y funciona bien en interiores de armario; la madera maciza y los chapados de calidad ganan en durabilidad, tacto y reparabilidad. Muchas veces la mejor solución combina ambas, y te asesoramos sin compromiso según uso y presupuesto." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hacéis cocinas o suelos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Estamos especializados en armarios, vestidores, muebles a medida y puertas de madera. Esa especialización es la que nos permite cuidar cada detalle." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La estimación de la calculadora me compromete a algo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Es una horquilla orientativa para que sepas por dónde se moverá el proyecto. El presupuesto en firme te lo damos gratis después de ver el espacio, y sin ningún compromiso." }
+    }
+  ]
+}
+</script>
+<script defer src="https://metricas.31-97-108-89.sslip.io/script.js" data-website-id="acb4d131-0008-4ca6-a2e7-b91249b85a1e"></script>
+</head>
+<body id="inicio">
+
+<!-- HEADER -->
+<header class="site">
+  <div class="wrap nav">
+    <a href="#inicio" aria-label="JOCOVI, inicio"><span class="logo-word">Jocovi</span></a>
+    <nav class="navlinks" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-ghost nav-cta" href="#presupuesto">Presupuesto</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-doors" aria-hidden="true"></div>
+  <video class="hero-video" id="heroVideo" aria-hidden="true"
+         autoplay muted loop playsinline preload="auto">
+    <source src="video/hero-movil.mp4" type="video/mp4">
+  </video>
+  <script>
+  /* El corte grande se pide SOLO en pantallas anchas y sin ahorro de datos, y se elige
+     antes de que el navegador empiece a bajar el pequeño. Con prefers-reduced-motion el
+     vídeo se retira entero: queda el muro de puertas, que ahí ya está quieto.
+     Sin JS no se ejecuta nada de esto y el vídeo se ve igual, en su versión ligera. */
+  (function(){
+    var v = document.getElementById('heroVideo');
+    if (!v) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { v.remove(); return; }
+    v.classList.add('esperando');
+    var ahorro = navigator.connection && navigator.connection.saveData;
+    if (innerWidth >= 900 && !ahorro) { v.querySelector('source').src = 'video/hero.mp4'; v.load(); }
+    /* La clase .con-video es solo un respaldo para navegadores sin :has(): el velo
+       reforzado ya lo aplica el CSS por la mera presencia del <video>, que es lo que
+       hace que el hero siga siendo legible aunque el JS no llegue a ejecutarse. */
+    function mostrar(){
+      v.classList.remove('esperando');
+      v.closest('.hero').classList.add('con-video');
+    }
+    v.addEventListener('playing', mostrar, { once: true });
+
+    /* Safari e iOS conceden el autoplay solo si el vídeo va muted y en línea, y lo niegan
+       igualmente en modo de ahorro de energía. Se pide reproducir a mano, y si lo rechazan
+       se enseña el vídeo igual: congelado en su primer fotograma se ve como una foto, que
+       es mejor que esconderlo. Cualquier gesto del usuario, o volver a la pestaña, lo
+       arranca. */
+    function intentar(){
+      var p = v.play();
+      if (p && p.catch) p.catch(function(){ /* autoplay denegado: se reintenta luego */ });
+    }
+    intentar();
+    setTimeout(function(){ if (v.readyState >= 2) mostrar(); }, 3000);
+    document.addEventListener('visibilitychange', function(){ if (!document.hidden) intentar(); });
+    ['pointerdown', 'touchstart', 'keydown'].forEach(function(ev){
+      addEventListener(ev, intentar, { once: true, passive: true });
+    });
+  })();
+
+  /* Cabecera-píldora: transparente arriba, cápsula con desenfoque al bajar.
+     El hero se mete debajo con un margen negativo, y ese número depende del alto REAL de
+     la barra: si no coincide asoma una raya del fondo crema sobre el vídeo. Se mide en
+     vivo y se guarda en --h-cabecera (solo en reposo: encogida el alto es otro). */
+  (function(){
+    var cab = document.querySelector('header.site');
+    if (!cab) return;
+    var pendiente = false;
+    /* La barra solo se vuelve transparente si de verdad hay vídeo detrás. Con
+       prefers-reduced-motion el vídeo se ha quitado del DOM y el hero no se mete bajo la
+       cabecera: dejarla transparente enseñaría el fondo oscuro del body como una franja
+       negra sobre el muro de puertas. */
+    var hayVideo = !!document.getElementById('heroVideo');
+    function medir(){
+      if (cab.classList.contains('desplazada')) return;
+      var h = cab.getBoundingClientRect().height;
+      if (h) document.documentElement.style.setProperty('--h-cabecera', (Math.ceil(h) + 1) + 'px');
+    }
+    function actualizar(){
+      pendiente = false;
+      var abajo = window.scrollY > 24;
+      cab.classList.toggle('desplazada', abajo);
+      cab.classList.toggle('arriba', !abajo && hayVideo);
+    }
+    addEventListener('scroll', function(){
+      if (!pendiente) { pendiente = true; requestAnimationFrame(actualizar); }
+    }, { passive: true });
+    addEventListener('resize', medir);
+    medir(); actualizar();
+  })();
+  </script>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Carpintería artesanal · Sevilla</span>
+    <h1>Armarios y muebles <em>a medida</em> en Sevilla, hechos a mano.</h1>
+    <div class="hero-pastilla">
+      <p>Diseñamos, fabricamos e instalamos armarios, muebles a medida y puertas en madera maciza. El oficio de toda una vida, adaptado a tu espacio y a tu gusto.</p>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-wa" href="https://wa.me/34000000000?text=Hola%20Jorge%2C%20me%20gustar%C3%ADa%20pedirte%20un%20presupuesto%20para%20" target="_blank" rel="noopener">
+        <svg class="wa-ico" viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2.1c1.8 1 3.9 1.5 6 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.4 1.2 1.2-4.3-.3-.4a10 10 0 01-1.6-5.3C5.2 9.6 10 5 16 5s10.8 4.6 10.8 10.5S22 25.7 16 25.7zm5.9-7.9c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
+        Solicita tu presupuesto
+      </a>
+      <a class="btn btn-ghost" href="#trabajos">Ver trabajos</a>
+    </div>
+    <ul class="hero-trust">
+      <li>Taller propio en Alcalá de Guadaíra</li>
+      <li>Presupuesto gratis y sin compromiso</li>
+      <li>Madera maciza</li>
+    </ul>
+  </div>
+</section>
+
+<!-- MANIFIESTO -->
+<section class="manifesto center">
+  <div class="wrap">
+    <span class="eyebrow">Sobre JOCOVI</span>
+    <div class="orn"><i></i></div>
+    <p class="lead-lg">En JOCOVI no fabricamos muebles en serie: creamos piezas únicas, pensadas para durar generaciones. Cada proyecto empieza escuchándote y termina con una pieza medida, fabricada e instalada a mano en nuestro taller de Alcalá de Guadaíra.</p>
+    <div class="orn"><i></i></div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="light" id="servicios">
+  <div class="wrap">
+    <div class="services-head">
+      <span class="eyebrow">Qué hacemos</span>
+      <h2 class="sec-title">Carpintería a medida en Sevilla: armarios, muebles y puertas</h2>
+    </div>
+    <div class="svc-grid">
+      <div class="svc feature">
+        <span class="tag">Lo que más hacemos</span>
+        <div class="num">01</div>
+        <h3>Armarios empotrados y vestidores a medida</h3>
+        <p>Diseñados al milímetro para aprovechar cada rincón, con los acabados, frentes e interiores que elijas.</p>
+      </div>
+      <div class="svc">
+        <div class="num">02</div>
+        <h3>Muebles a medida</h3>
+        <p>Estanterías, aparadores, mesas y muebles de salón únicos, fabricados en madera maciza y adaptados a tu espacio.</p>
+      </div>
+      <div class="svc">
+        <div class="num">03</div>
+        <h3>Puertas de madera</h3>
+        <p>Puertas de paso, blindadas y a medida, con la calidez y la robustez de la madera bien trabajada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="light" id="trabajos" style="padding-top:0;">
+  <div class="wrap">
+    <div class="services-head">
+      <span class="eyebrow">Galería</span>
+      <h2 class="sec-title">Algunos de nuestros trabajos</h2>
+    </div>
+    <div class="gallery-grid">
+      <figure class="gitem"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=700&q=80&auto=format&fit=crop" alt="Armario empotrado de madera a medida" /><figcaption>Armario empotrado</figcaption></figure>
+      <figure class="gitem"><img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=700&q=80&auto=format&fit=crop" alt="Vestidor de madera a medida" /><figcaption>Vestidor a medida</figcaption></figure>
+      <figure class="gitem"><img src="https://images.unsplash.com/photo-1611486212557-88be5ff6f941?w=700&q=80&auto=format&fit=crop" alt="Aparador de madera maciza a medida" /><figcaption>Aparador a medida</figcaption></figure>
+      <figure class="gitem"><img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=700&q=80&auto=format&fit=crop" alt="Taburete de madera a medida" /><figcaption>Taburete a medida</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE MADERA -->
+<section class="feature">
+  <div class="wrap feature-grid">
+    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1000&q=80&auto=format&fit=crop" alt="Mueble de salón de madera maciza a medida" />
+    <div>
+      <span class="eyebrow">Materia prima</span>
+      <div class="orn left"><i></i></div>
+      <h2>Madera maciza, de verdad.</h2>
+      <p>Trabajamos madera natural seleccionada pieza a pieza. Nada de aglomerados que se hinchan ni acabados que se despegan: solo madera noble, tratada con mimo para que envejezca bien.</p>
+      <ul>
+        <li>Diseño y fabricación 100% a medida</li>
+        <li>Madera maciza y chapados de calidad</li>
+        <li>Acabados a mano, resistentes y duraderos</li>
+        <li>Instalación por nuestro propio equipo</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- OPINIONES (WhatsApp) -->
+<section class="light" id="opiniones">
+  <div class="wrap">
+    <div class="services-head">
+      <span class="eyebrow">Opiniones</span>
+      <h2 class="sec-title">Lo que nos dicen nuestros clientes</h2>
+      <p class="muted" style="margin-top:10px;">Así nos escriben nuestros clientes por WhatsApp cuando reciben su mueble.</p>
+    </div>
+    <div class="phones">
+
+      <div class="wa-phone">
+        <div class="wa-screen">
+          <div class="wa-status"><span>9:41</span><span class="icons">📶 🔋</span></div>
+          <div class="wa-head"><span class="back">‹</span><span class="av">MR</span><span class="who"><span class="wa-name">María R.</span><span class="wa-sub">en línea</span></span><span class="hicons">📹 📞</span></div>
+          <div class="wa-body">
+            <span class="wa-day">AYER</span>
+            <div class="wa-out">¡Jorge, mil gracias! El armario ha quedado espectacular, encaja perfecto en el hueco 😍<span class="wa-t">18:02 <span class="tick">✓✓</span></span></div>
+            <div class="wa-in">¡Me alegro muchísimo! Ha sido un placer 🙌<span class="wa-t">18:05</span></div>
+            <div class="wa-out">Se nota el trabajo bien hecho. Os recomendaré a todo el mundo 💪<span class="wa-t">18:06 <span class="tick">✓✓</span></span></div>
+          </div>
+          <div class="wa-input"><span class="field">Escribe un mensaje…</span><span class="send">➤</span></div>
+        </div>
+      </div>
+
+      <div class="wa-phone">
+        <div class="wa-screen">
+          <div class="wa-status"><span>9:41</span><span class="icons">📶 🔋</span></div>
+          <div class="wa-head"><span class="back">‹</span><span class="av">JL</span><span class="who"><span class="wa-name">Javier L.</span><span class="wa-sub">en línea</span></span><span class="hicons">📹 📞</span></div>
+          <div class="wa-body">
+            <span class="wa-day">LUNES</span>
+            <div class="wa-out">Buenas Jorge 👋 El vestidor es una pasada, mi mujer está encantada<span class="wa-t">10:12 <span class="tick">✓✓</span></span></div>
+            <div class="wa-out">Puntual, limpio y un acabado de 10. Gracias de verdad 🙏<span class="wa-t">10:12 <span class="tick">✓✓</span></span></div>
+            <div class="wa-in">¡Cuánto me alegro! Cualquier cosa que necesitéis, aquí estoy 😊<span class="wa-t">10:20</span></div>
+          </div>
+          <div class="wa-input"><span class="field">Escribe un mensaje…</span><span class="send">➤</span></div>
+        </div>
+      </div>
+
+      <div class="wa-phone">
+        <div class="wa-screen">
+          <div class="wa-status"><span>9:41</span><span class="icons">📶 🔋</span></div>
+          <div class="wa-head"><span class="back">‹</span><span class="av">CG</span><span class="who"><span class="wa-name">Carmen G.</span><span class="wa-sub">en línea</span></span><span class="hicons">📹 📞</span></div>
+          <div class="wa-body">
+            <span class="wa-day">HOY</span>
+            <div class="wa-out">Jorge, acabamos de estrenar las puertas nuevas ✨ menudo cambio ha dado la casa<span class="wa-t">13:40 <span class="tick">✓✓</span></span></div>
+            <div class="wa-in">¡Qué buena noticia! A disfrutarlas muchos años 🌳<span class="wa-t">13:44</span></div>
+            <div class="wa-out">Sin duda repetiremos con el mueble del salón 🙌<span class="wa-t">13:45 <span class="tick">✓✓</span></span></div>
+          </div>
+          <div class="wa-input"><span class="field">Escribe un mensaje…</span><span class="send">➤</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRESUPUESTO (calculadora) -->
+<section class="presupuesto" id="presupuesto">
+  <div class="wrap presu-box">
+    <div class="presu-head">
+      <span class="eyebrow">Presupuesto online</span>
+      <div class="orn"><i></i></div>
+      <h2 class="sec-title" style="color:#fff;">Calcula tu presupuesto en un minuto</h2>
+      <p style="color:var(--muted);margin-top:12px;">Cuéntanos qué necesitas con tus palabras y te damos una horquilla orientativa al momento. Sin compromiso y sin dejar tus datos.</p>
+    </div>
+
+    <!-- Sin JS (o si la calculadora no carga): siempre queda el camino de WhatsApp -->
+    <div id="presu-fallback" class="center">
+      <p style="color:var(--cream);margin-bottom:22px;">Cuéntanoslo directamente por WhatsApp y te preparamos el presupuesto igual de rápido.</p>
+      <a class="btn btn-wa" href="https://wa.me/34000000000?text=Hola%20Jorge%2C%20me%20gustar%C3%ADa%20pedirte%20un%20presupuesto%20para%20" target="_blank" rel="noopener">
+        <svg class="wa-ico" viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2.1c1.8 1 3.9 1.5 6 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.4 1.2 1.2-4.3-.3-.4a10 10 0 01-1.6-5.3C5.2 9.6 10 5 16 5s10.8 4.6 10.8 10.5S22 25.7 16 25.7zm5.9-7.9c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
+        Pedir presupuesto por WhatsApp
+      </a>
+    </div>
+
+    <!-- La calculadora: la revela el JS solo si puede funcionar -->
+    <div id="presu-app" class="oculto">
+
+      <!-- Paso 1: qué necesitas -->
+      <form id="presu-form" novalidate>
+        <div class="chips" id="presu-chips" role="group" aria-label="Tipo de trabajo"></div>
+        <label for="presu-desc" class="pregunta" style="margin-top:0;">Describe el trabajo con tus palabras:</label>
+        <textarea id="presu-desc" class="presu-field" maxlength="600" rows="4" required
+          placeholder="Ej.: Un armario empotrado de 3 metros de ancho por 2,40 de alto, con 3 puertas correderas, lacado en blanco. Y aprovechar para cambiar 6 puertas de paso."></textarea>
+        <div class="presu-meta">
+          <span id="presu-contador" aria-hidden="true">0 / 600</span>
+          <span>Sin datos personales: solo el trabajo.</span>
+        </div>
+        <!-- Alternativa por voz: se muestra solo si el navegador puede grabar (JS) -->
+        <div class="audio-row" id="presu-audio-row" hidden>
+          <button type="button" class="btn-audio" id="presu-audio-btn" aria-live="polite">
+            <span class="rec-dot" aria-hidden="true"></span><span class="audio-label">Grabar audio</span>
+          </button>
+          <span class="audio-estado" id="presu-audio-estado">¿No sabes cómo describirlo? Mándanos un audio y lo transcribimos por ti.</span>
+        </div>
+        <div class="hp-campo" aria-hidden="true">
+          <label for="presu-web">No rellenes este campo</label>
+          <input type="text" id="presu-web" name="web" tabindex="-1" autocomplete="off" />
+        </div>
+        <button type="submit" class="btn btn-gold" id="presu-enviar">Calcular estimación</button>
+      </form>
+
+      <!-- Paso 2: confirma lo entendido -->
+      <div id="presu-confirmar" class="oculto" tabindex="-1">
+        <p class="pregunta" style="font-size:17px;">Esto es lo que hemos entendido. Corrige lo que haga falta:</p>
+        <div id="presu-tarjetas"></div>
+        <div id="presu-avisos"></div>
+        <div class="presu-acciones">
+          <button type="button" class="btn btn-gold" id="presu-ver">Ver estimación</button>
+          <button type="button" class="btn btn-ghost" id="presu-reiniciar">Empezar de nuevo</button>
+        </div>
+      </div>
+
+      <!-- Paso 3: resultado -->
+      <div id="presu-resultado" class="oculto" role="status" aria-live="polite" tabindex="-1"></div>
+
+      <!-- Paso 4: recibir el presupuesto por email (captura de contacto) -->
+      <div id="presu-lead" class="oculto lead-box" tabindex="-1">
+        <span class="eyebrow">Te lo enviamos por email</span>
+        <p class="lead-intro">Déjanos tus datos y te mandamos esta estimación por correo con el detalle. Sin compromiso.</p>
+        <form id="presu-lead-form" novalidate>
+          <div class="lead-grid">
+            <div class="full"><label for="lead-nombre">Nombre</label><input type="text" id="lead-nombre" autocomplete="name" required maxlength="120" /></div>
+            <div><label for="lead-email">Email</label><input type="email" id="lead-email" autocomplete="email" required maxlength="200" /></div>
+            <div><label for="lead-tel">Teléfono (opcional)</label><input type="tel" id="lead-tel" autocomplete="tel" maxlength="40" /></div>
+          </div>
+          <div class="hp-campo" aria-hidden="true"><label for="lead-web">No rellenes este campo</label><input type="text" id="lead-web" tabindex="-1" autocomplete="off" /></div>
+          <label class="lead-consent"><input type="checkbox" id="lead-consent" required /><span>Acepto que JOCOVI use mis datos para enviarme esta estimación y contactarme sobre mi solicitud, según la <a href="privacidad/index.html" target="_blank" rel="noopener">política de privacidad</a>.</span></label>
+          <div class="presu-acciones">
+            <button type="submit" class="btn btn-gold" id="lead-enviar">Enviármelo por email</button>
+            <button type="button" class="btn btn-ghost" id="lead-omitir">Ahora no</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="light" id="faq">
+  <div class="wrap">
+    <div class="services-head">
+      <span class="eyebrow">Dudas habituales</span>
+      <h2 class="sec-title">Preguntas frecuentes</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Cuánto cuesta un armario empotrado a medida?</summary>
+        <p>Depende del tamaño, los materiales y el interior. Como referencia de mercado, la mayoría de armarios empotrados a medida se mueven entre 700 y 2.200 €, y un vestidor completo puede ir de 1.500 € a más de 6.000 €. Para tu caso concreto, <a href="#presupuesto">la calculadora</a> te da una horquilla al momento, sin dejar tus datos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto se tarda en fabricar e instalar un armario a medida?</summary>
+        <p>Cada proyecto es distinto: tras la visita para tomar medidas te damos un plazo cerrado. Lo habitual es de 2 a 6 semanas entre el encargo y la instalación, que normalmente se resuelve en uno o dos días.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Trabajáis fuera de Alcalá de Guadaíra?</summary>
+        <p>Sí. El taller está en Alcalá de Guadaíra y trabajamos en toda Sevilla y su área: Sevilla capital, Dos Hermanas, Mairena del Alcor, El Viso del Alcor, Utrera, Carmona y alrededores.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Melamina o madera maciza: qué me conviene?</summary>
+        <p>La melamina es más económica y funciona bien en interiores de armario; la madera maciza y los chapados de calidad ganan en durabilidad, tacto y reparabilidad. Muchas veces la mejor solución combina ambas, y te asesoramos sin compromiso según uso y presupuesto.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hacéis cocinas o suelos?</summary>
+        <p>No. Estamos especializados en armarios, vestidores, muebles a medida y puertas de madera. Esa especialización es la que nos permite cuidar cada detalle.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿La estimación de la calculadora me compromete a algo?</summary>
+        <p>No. Es una horquilla orientativa para que sepas por dónde se moverá el proyecto. El presupuesto en firme te lo damos gratis después de ver el espacio, y sin ningún compromiso.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact" id="contacto">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Contacto</span>
+      <div class="orn left"><i></i></div>
+      <h2>¿Hablamos de tu proyecto?</h2>
+      <p>Cuéntanos qué necesitas por WhatsApp y te preparamos un presupuesto sin compromiso. Es tan fácil como escribir un mensaje.</p>
+      <div class="hero-cta" style="margin-top:28px;">
+        <a class="btn btn-wa" href="https://wa.me/34000000000?text=Hola%20Jorge%2C%20me%20gustar%C3%ADa%20pedirte%20un%20presupuesto%20para%20" target="_blank" rel="noopener">
+          <svg class="wa-ico" viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2.1c1.8 1 3.9 1.5 6 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.4 1.2 1.2-4.3-.3-.4a10 10 0 01-1.6-5.3C5.2 9.6 10 5 16 5s10.8 4.6 10.8 10.5S22 25.7 16 25.7zm5.9-7.9c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
+          Escribir por WhatsApp
+        </a>
+      </div>
+      <div class="meta">
+        <span>📍 <b>Taller:</b> Alcalá de Guadaíra, Sevilla</span>
+        <a href="https://wa.me/34000000000?text=Hola%20Jorge%2C%20me%20gustar%C3%ADa%20pedirte%20un%20presupuesto%20para%20" target="_blank" rel="noopener">📱 <b>WhatsApp:</b> +34 000 000 000</a>
+      </div>
+    </div>
+
+    <div class="wa-phone">
+      <div class="wa-screen">
+        <div class="wa-status"><span>9:41</span><span class="icons">📶 🔋</span></div>
+        <div class="wa-head"><span class="back">‹</span><span class="av">J</span><span class="who"><span class="wa-name">Jorge · JOCOVI</span><span class="wa-sub">en línea</span></span><span class="hicons">📹 📞</span></div>
+        <div class="wa-body">
+          <span class="wa-day">HOY</span>
+          <div class="wa-out">Hola Jorge, me gustaría pedirte un presupuesto para un armario empotrado en el dormitorio 🙂<span class="wa-t">12:24 <span class="tick">✓✓</span></span></div>
+          <div class="wa-in">¡Hola! Claro que sí. ¿Me pasas las medidas del hueco y alguna foto?<span class="wa-t">12:26</span></div>
+          <div class="wa-out">Son 2,40 × 2,60 m. Te mando foto ahora 📸<span class="wa-t">12:27 <span class="tick">✓✓</span></span></div>
+          <div class="wa-in">Perfecto. Me acerco esta semana a tomar medidas y te preparo el presupuesto sin compromiso 👍<span class="wa-t">12:28</span></div>
+        </div>
+        <div class="wa-input"><span class="field">Escribe un mensaje…</span><span class="send">➤</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <span class="foot-word">Jocovi</span>
+      <nav class="foot-links" aria-label="Pie">
+        <a href="#servicios">Servicios</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#presupuesto">Presupuesto</a>
+        <a href="#faq">Preguntas frecuentes</a>
+        <a href="blog/index.html">Consejos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="aviso-legal/index.html">Aviso legal</a>
+        <a href="privacidad/index.html">Privacidad</a>
+      </nav>
+    </div>
+    <small>© 2026 JOCOVI · Jorge Coco Villalba · Carpintería de madera en Alcalá de Guadaíra (Sevilla) · Armarios empotrados, vestidores, muebles a medida y puertas · WhatsApp +34 000 000 000</small>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a class="wa-float" href="https://wa.me/34000000000?text=Hola%20Jorge%2C%20me%20gustar%C3%ADa%20pedirte%20un%20presupuesto%20para%20" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2.1c1.8 1 3.9 1.5 6 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.4 1.2 1.2-4.3-.3-.4a10 10 0 01-1.6-5.3C5.2 9.6 10 5 16 5s10.8 4.6 10.8 10.5S22 25.7 16 25.7zm5.9-7.9c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script>
+/* Calculadora de presupuestos — mejora progresiva: sin JS o sin backend, la
+   sección enseña el CTA de WhatsApp y nada más. La salida del servidor se
+   pinta SIEMPRE con textContent (nunca innerHTML): es dato no confiable. */
+(function () {
+  'use strict';
+  var WA = '34000000000'; // placeholder deliberado — sustituir con el resto de CTAs cuando Jorge active el número
+  var app = document.getElementById('presu-app');
+  var fallback = document.getElementById('presu-fallback');
+  var form = document.getElementById('presu-form');
+  var desc = document.getElementById('presu-desc');
+  var contador = document.getElementById('presu-contador');
+  var chipsBox = document.getElementById('presu-chips');
+  var confirmar = document.getElementById('presu-confirmar');
+  var tarjetas = document.getElementById('presu-tarjetas');
+  var avisos = document.getElementById('presu-avisos');
+  var resultado = document.getElementById('presu-resultado');
+  var leadStep = document.getElementById('presu-lead');
+  var btnEnviar = document.getElementById('presu-enviar');
+  var estado = { ref: '', lineas: [], faltantes: [], t0: Date.now(), reintentos: 0, resumen: '', rango: '' };
+
+  var SEMILLAS = {
+    'Armarios': 'Un armario empotrado de __ metros de ancho por __ de alto, ',
+    'Puertas': '__ puertas de paso, acabado __, ',
+    'Ventanas': '__ ventanas de madera de __ x __ metros, ',
+    'Escaleras': 'Una escalera de madera, ',
+    'Mobiliario': 'Un mueble a medida para __, '
+  };
+
+  function el(tag, cls, txt) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (txt != null) e.textContent = txt;
+    return e;
+  }
+  function eur(n) { return n.toLocaleString('es-ES') + ' €'; }
+  function waUrl(texto) { return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(texto); }
+  function num(v) {
+    if (v == null || String(v).trim() === '') return null;
+    var n = parseFloat(String(v).replace(',', '.'));
+    return isFinite(n) ? n : null;
+  }
+  function mostrar(paso) {
+    [form, confirmar, resultado, leadStep].forEach(function (p) { p.classList.add('oculto'); });
+    paso.classList.remove('oculto');
+    if (paso !== form) { paso.focus(); }
+  }
+  function botonWa(texto, etiqueta) {
+    var a = el('a', 'btn btn-wa', etiqueta || 'Seguir por WhatsApp');
+    a.href = waUrl(texto);
+    a.target = '_blank';
+    a.rel = 'noopener';
+    return a;
+  }
+
+  // Arranque: la calculadora solo aparece si el backend responde.
+  // Abierta como fichero local no hay backend posible: ni lo intentamos.
+  var arranque = location.protocol === 'file:'
+    ? Promise.reject(new Error('local'))
+    : fetch('/api/catalogo').then(function (r) {
+        if (!r.ok) throw new Error('sin catálogo');
+        return r.json();
+      });
+  arranque.then(function (cat) {
+    (cat.categorias || []).forEach(function (c) {
+      var chip = el('button', 'chip', c);
+      chip.type = 'button';
+      chip.setAttribute('aria-pressed', 'false');
+      chip.addEventListener('click', function () {
+        var activo = chip.getAttribute('aria-pressed') === 'true';
+        var semilla = SEMILLAS[c] || 'Trabajo de ' + c.toLowerCase() + ': __, ';
+        if (!activo) {
+          // Marcar: añade la semilla (con separador si hace falta) y recuerda exactamente lo insertado
+          var sep = (desc.value && !/[\s,]$/.test(desc.value)) ? ' ' : '';
+          var insertado = sep + semilla;
+          desc.value += insertado;
+          chip._insertado = insertado;
+          chip.setAttribute('aria-pressed', 'true');
+        } else {
+          // Desmarcar: quita justo lo que ESTE chip metió (si el usuario no lo ha reescrito)
+          var ins = chip._insertado || semilla;
+          var idx = desc.value.lastIndexOf(ins);
+          if (idx !== -1) desc.value = desc.value.slice(0, idx) + desc.value.slice(idx + ins.length);
+          chip._insertado = '';
+          chip.setAttribute('aria-pressed', 'false');
+        }
+        desc.dispatchEvent(new Event('input'));
+        desc.focus();
+      });
+      chipsBox.appendChild(chip);
+    });
+    fallback.classList.add('oculto');
+    app.classList.remove('oculto');
+    estado.t0 = Date.now();
+  }).catch(function () { /* sin backend: queda el fallback de WhatsApp */ });
+
+  // El micrófono se configura siempre (deja el handler atado); el botón vive dentro
+  // de #presu-app, que permanece oculto si el backend no responde.
+  configurarAudio();
+
+  desc.addEventListener('input', function () {
+    contador.textContent = desc.value.length + ' / 600';
+  });
+
+  // ---- Audio: grabar y transcribir (mejora progresiva; solo si el navegador puede) ----
+  function configurarAudio() {
+    var soporta = !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder);
+    if (!soporta) return; // sin soporte: queda solo el textarea, sin romper nada
+    var row = document.getElementById('presu-audio-row');
+    var btn = document.getElementById('presu-audio-btn');
+    var lab = btn.querySelector('.audio-label');
+    var est = document.getElementById('presu-audio-estado');
+    row.hidden = false;
+    var grabando = false, rec = null, stream = null, trozos = [];
+
+    function estado_(t) { est.textContent = t; }
+    function parar() {
+      if (rec && rec.state !== 'inactive') rec.stop();
+      if (stream) { stream.getTracks().forEach(function (t) { t.stop(); }); stream = null; }
+      grabando = false; btn.classList.remove('grabando'); lab.textContent = 'Grabar audio';
+    }
+
+    btn.addEventListener('click', function () {
+      if (grabando) { parar(); estado_('Transcribiendo…'); return; }
+      navigator.mediaDevices.getUserMedia({ audio: true }).then(function (s) {
+        stream = s; trozos = [];
+        var mime = ['audio/webm;codecs=opus', 'audio/webm', 'audio/ogg', 'audio/mp4'].filter(function (m) {
+          return window.MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(m);
+        })[0] || '';
+        rec = mime ? new MediaRecorder(s, { mimeType: mime }) : new MediaRecorder(s);
+        rec.addEventListener('dataavailable', function (e) { if (e.data && e.data.size) trozos.push(e.data); });
+        rec.addEventListener('stop', function () { enviarAudio(new Blob(trozos, { type: (rec && rec.mimeType) || 'audio/webm' })); });
+        rec.start();
+        grabando = true; btn.classList.add('grabando'); lab.textContent = 'Detener y transcribir';
+        estado_('Grabando… habla y pulsa para terminar.');
+        // Corte de seguridad a los 2 min
+        setTimeout(function () { if (grabando) { parar(); estado_('Transcribiendo…'); } }, 120000);
+      }).catch(function () {
+        estado_('No hemos podido acceder al micrófono. Puedes escribirlo abajo.');
+      });
+    });
+
+    function enviarAudio(blob) {
+      if (!blob || blob.size < 1024) { estado_('No se grabó audio. Inténtalo de nuevo o escríbelo.'); return; }
+      btn.disabled = true;
+      fetch('/api/transcribir', { method: 'POST', headers: { 'Content-Type': blob.type || 'audio/webm' }, body: blob })
+        .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+        .then(function (res) {
+          btn.disabled = false;
+          if (!res.ok || !res.d || !res.d.texto) { estado_((res.d && res.d.error) || 'No hemos podido transcribir. Escríbelo abajo.'); return; }
+          var t = res.d.texto.trim();
+          desc.value = desc.value.trim() ? (desc.value.trim() + ' ' + t) : t;
+          desc.dispatchEvent(new Event('input'));
+          desc.focus();
+          estado_('Listo: hemos pasado tu audio a texto. Revísalo y corrige si hace falta.');
+        })
+        .catch(function () { btn.disabled = false; estado_('No hemos podido transcribir ahora mismo. Escríbelo abajo.'); });
+    }
+  }
+
+  function degradar(mensaje) {
+    resultado.textContent = '';
+    resultado.appendChild(el('p', 'aviso', mensaje));
+    var acc = el('div', 'presu-acciones');
+    acc.appendChild(botonWa('Hola Jorge, me gustaría pedirte un presupuesto para: ' + desc.value, 'Pedirlo por WhatsApp'));
+    acc.appendChild(botonReiniciar());
+    resultado.appendChild(acc);
+    mostrar(resultado);
+  }
+  function botonReiniciar() {
+    var b = el('button', 'btn btn-ghost', 'Empezar de nuevo');
+    b.type = 'button';
+    b.addEventListener('click', reiniciar);
+    return b;
+  }
+  function reiniciar() {
+    estado = { ref: '', lineas: [], faltantes: [], t0: Date.now(), reintentos: 0, resumen: '', rango: '' };
+    desc.value = '';
+    contador.textContent = '0 / 600';
+    btnEnviar.disabled = false;
+    btnEnviar.textContent = 'Calcular estimación';
+    chipsBox.querySelectorAll('.chip').forEach(function (c) { c.setAttribute('aria-pressed', 'false'); c._insertado = ''; });
+    resetLead();
+    mostrar(form);
+    desc.focus();
+  }
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var texto = desc.value.trim();
+    if (texto.length < 10) { desc.focus(); desc.setCustomValidity('Cuéntanos un poco más (mínimo 10 caracteres).'); form.reportValidity(); return; }
+    desc.setCustomValidity('');
+    btnEnviar.disabled = true;
+    btnEnviar.textContent = 'Calculando…';
+    fetch('/api/estimar', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ descripcion: texto, web: document.getElementById('presu-web').value, t_ms: Date.now() - estado.t0 })
+    }).then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+      .then(function (res) {
+        btnEnviar.disabled = false;
+        btnEnviar.textContent = 'Calcular estimación';
+        if (!res.ok) { degradar(res.d && res.d.error ? res.d.error : 'No hemos podido calcularlo ahora mismo.'); return; }
+        estado.ref = res.d.ref;
+        estado.lineas = res.d.lineas;
+        estado.faltantes = res.d.faltantes || [];
+        estado.fuera = res.d.fuera_catalogo || [];
+        estado.reintentos = 0;
+        if (!res.d.lineas.length) { pintarResultado(res.d.resultado); return; }
+        pintarConfirmar();
+      })
+      .catch(function () {
+        btnEnviar.disabled = false;
+        btnEnviar.textContent = 'Calcular estimación';
+        degradar('La calculadora no está disponible ahora mismo.');
+      });
+  });
+
+  function campo(labelTxt, id, valor, decimal) {
+    var caja = el('div');
+    var lab = el('label', null, labelTxt);
+    lab.htmlFor = id;
+    var inp = el('input');
+    inp.id = id;
+    inp.type = 'text';
+    inp.inputMode = 'decimal';
+    inp.autocomplete = 'off';
+    if (valor != null) inp.value = decimal ? String(valor).replace('.', ',') : valor;
+    caja.appendChild(lab);
+    caja.appendChild(inp);
+    return caja;
+  }
+
+  function pintarConfirmar() {
+    tarjetas.textContent = '';
+    avisos.textContent = '';
+    estado.lineas.forEach(function (l, i) {
+      var t = el('div', 'tarjeta');
+      t.appendChild(el('h3', null, l.articulo || l.categoria));
+      var campos = el('div', 'campos');
+      campos.appendChild(campo('Unidades', 'l' + i + '-cantidad', l.cantidad, false));
+      campos.appendChild(campo('Ancho (m)', 'l' + i + '-ancho', l.ancho_m, true));
+      campos.appendChild(campo('Alto (m)', 'l' + i + '-alto', l.alto_m, true));
+      var faltaLargo = estado.faltantes.some(function (f) { return f.linea === i && f.campo === 'largo'; });
+      if (l.largo_m != null || faltaLargo) campos.appendChild(campo('Largo (m)', 'l' + i + '-largo', l.largo_m, true));
+      campos.appendChild(campo('Acabado / color', 'l' + i + '-acabado', l.acabado, false));
+      t.appendChild(campos);
+
+      estado.faltantes.filter(function (f) { return f.linea === i; }).forEach(function (f) {
+        t.appendChild(el('p', 'pregunta', f.pregunta));
+        var idCampo = f.campo === 'medidas' ? 'ancho' : f.campo === 'largo' ? 'largo' : f.campo === 'cantidad' ? 'cantidad' : null;
+        if (idCampo) {
+          var caja = document.getElementById('l' + i + '-' + idCampo);
+          if (caja && caja.parentElement) caja.parentElement.classList.add('falta');
+        }
+        if (f.campo === 'articulo' && f.opciones) {
+          var caja2 = el('div', 'falta');
+          var lab = el('label', null, 'Tipo');
+          lab.htmlFor = 'l' + i + '-articulo';
+          var sel = el('select');
+          sel.id = 'l' + i + '-articulo';
+          var op0 = el('option', null, 'No lo tengo claro');
+          op0.value = '';
+          sel.appendChild(op0);
+          f.opciones.forEach(function (o) {
+            var op = el('option', null, o.toLowerCase());
+            op.value = o;
+            sel.appendChild(op);
+          });
+          caja2.appendChild(lab);
+          caja2.appendChild(sel);
+          t.appendChild(caja2);
+        }
+      });
+      tarjetas.appendChild(t);
+    });
+    (estado.fuera || []).forEach(function (fx) {
+      avisos.appendChild(el('p', 'aviso', 'Hay una parte que no podemos estimar online (' + fx + '): esa la vemos en persona.'));
+    });
+    mostrar(confirmar);
+  }
+
+  function leerLineas() {
+    return estado.lineas.map(function (l, i) {
+      var sel = document.getElementById('l' + i + '-articulo');
+      var largoInp = document.getElementById('l' + i + '-largo');
+      return {
+        categoria: l.categoria,
+        articulo: sel && sel.value ? sel.value : l.articulo,
+        cantidad: num((document.getElementById('l' + i + '-cantidad') || {}).value),
+        ancho_m: num((document.getElementById('l' + i + '-ancho') || {}).value),
+        alto_m: num((document.getElementById('l' + i + '-alto') || {}).value),
+        largo_m: largoInp ? num(largoInp.value) : l.largo_m,
+        acabado: ((document.getElementById('l' + i + '-acabado') || {}).value || '').trim() || null
+      };
+    });
+  }
+
+  document.getElementById('presu-ver').addEventListener('click', function () {
+    var lineas = leerLineas();
+    fetch('/api/recalcular', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ref: estado.ref, lineas: lineas })
+    }).then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+      .then(function (res) {
+        if (!res.ok) { degradar(res.d && res.d.error ? res.d.error : 'No hemos podido calcularlo.'); return; }
+        estado.lineas = lineas;
+        // Si aún no se puede dar número pero hay preguntas pendientes, una segunda ronda de afinado
+        if (!res.d.resultado.cotizable && res.d.faltantes && res.d.faltantes.length && estado.reintentos < 1) {
+          estado.reintentos += 1;
+          estado.faltantes = res.d.faltantes;
+          pintarConfirmar();
+          avisos.appendChild(el('p', 'aviso', 'Con un par de datos más podemos afinar el precio:'));
+          return;
+        }
+        pintarResultado(res.d.resultado);
+      })
+      .catch(function () { degradar('La calculadora no está disponible ahora mismo.'); });
+  });
+
+  document.getElementById('presu-reiniciar').addEventListener('click', reiniciar);
+
+  function resumenLineas() {
+    return estado.lineas.map(function (l) {
+      var p = [];
+      if (l.cantidad != null) p.push(l.cantidad + ' ×');
+      p.push((l.articulo || l.categoria).toLowerCase());
+      if (l.ancho_m != null && l.alto_m != null) p.push(String(l.ancho_m).replace('.', ',') + ' × ' + String(l.alto_m).replace('.', ',') + ' m');
+      if (l.acabado) p.push(l.acabado);
+      return p.join(' ');
+    }).join(' + ');
+  }
+
+  function pintarResultado(r) {
+    resultado.textContent = '';
+    if (r && r.cotizable) {
+      resultado.appendChild(el('p', 'eyebrow', 'Estimación orientativa'));
+      resultado.appendChild(el('p', 'rango-big', eur(r.rango_total[0]) + ' – ' + eur(r.rango_total[1])));
+      resultado.appendChild(el('p', 'rango-nota', 'IVA (' + r.iva + ' %) incluido · Base: ' + eur(r.rango_base[0]) + ' – ' + eur(r.rango_base[1]) + ' · Ref. ' + estado.ref));
+      var ul = el('ul', 'desglose');
+      (r.desglose || []).forEach(function (d) {
+        var li = el('li');
+        li.appendChild(el('span', 'd-tit', d.titulo.toLowerCase()));
+        var rMin = Math.round(d.rango[0]), rMax = Math.round(d.rango[1]);
+        li.appendChild(el('span', 'd-rng', eur(rMin) + ' – ' + eur(rMax)));
+        var det = d.detalle + (d.asunciones && d.asunciones.length ? ' · ' + d.asunciones.join(', ') : '');
+        li.appendChild(el('span', 'd-det', det));
+        ul.appendChild(li);
+      });
+      resultado.appendChild(ul);
+      (r.descargos || []).forEach(function (dx) { resultado.appendChild(el('p', 'descargo', dx)); });
+      // Guardamos el resumen para el paso de email (captura de lead)
+      estado.resumen = resumenLineas();
+      estado.rango = eur(r.rango_total[0]) + ' – ' + eur(r.rango_total[1]);
+      var acc = el('div', 'presu-acciones');
+      var btnEmail = el('button', 'btn btn-gold', 'Recibir presupuesto por email');
+      btnEmail.type = 'button';
+      btnEmail.addEventListener('click', mostrarLead);
+      acc.appendChild(btnEmail);
+      var msj = 'Hola Jorge, he calculado un presupuesto en la web (ref. ' + estado.ref + '): ' + resumenLineas() +
+        '. Estimación web: ' + eur(r.rango_total[0]) + ' – ' + eur(r.rango_total[1]) + '. ¿Podemos verlo?';
+      acc.appendChild(botonWa(msj, 'Cerrar por WhatsApp'));
+      acc.appendChild(botonReiniciar());
+      resultado.appendChild(acc);
+    } else {
+      resultado.appendChild(el('p', 'aviso', (r && r.mensaje) || 'Necesitamos verlo en persona para darte un precio honesto.'));
+      var acc2 = el('div', 'presu-acciones');
+      var msj2 = 'Hola Jorge, he usado la calculadora de la web' + (estado.ref ? ' (ref. ' + estado.ref + ')' : '') +
+        ' y me pide veros en persona. El trabajo: ' + (resumenLineas() || desc.value);
+      acc2.appendChild(botonWa(msj2, 'Concertar visita por WhatsApp'));
+      acc2.appendChild(botonReiniciar());
+      resultado.appendChild(acc2);
+    }
+    mostrar(resultado);
+  }
+
+  // ---- Paso 4: recibir el presupuesto por email (captura de lead) ----
+  function mostrarLead() {
+    resetLead();
+    mostrar(leadStep);
+  }
+  function resetLead() {
+    var gracias = document.getElementById('lead-gracias');
+    if (gracias) gracias.remove();
+    var err = document.getElementById('lead-error');
+    if (err) err.remove();
+    leadStep.classList.remove('enviado');
+    if (leadForm) {
+      leadForm.classList.remove('oculto');
+      leadForm.reset();
+    }
+  }
+
+  var leadForm = document.getElementById('presu-lead-form');
+  var leadOmitir = document.getElementById('lead-omitir');
+  if (leadOmitir) leadOmitir.addEventListener('click', function () { mostrar(resultado); });
+
+  if (leadForm) leadForm.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var nombre = document.getElementById('lead-nombre');
+    var email = document.getElementById('lead-email');
+    var tel = document.getElementById('lead-tel');
+    var consent = document.getElementById('lead-consent');
+    [nombre, email].forEach(function (c) { c.setCustomValidity(''); });
+    if (!nombre.value.trim()) { nombre.setCustomValidity('Dinos tu nombre.'); leadForm.reportValidity(); return; }
+    if (!email.checkValidity()) { email.setCustomValidity('Necesitamos un email válido.'); leadForm.reportValidity(); return; }
+    if (!consent.checked) { consent.setCustomValidity && consent.setCustomValidity('Marca la casilla para poder enviártelo.'); leadForm.reportValidity(); return; }
+
+    var btn = document.getElementById('lead-enviar');
+    btn.disabled = true; btn.textContent = 'Enviando…';
+    fetch('/api/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        ref: estado.ref,
+        nombre: nombre.value.trim(),
+        email: email.value.trim(),
+        telefono: tel.value.trim(),
+        consent: true,
+        resumen: estado.resumen,
+        rango: estado.rango,
+        web: document.getElementById('lead-web').value,
+        t_ms: Date.now() - estado.t0
+      })
+    }).then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+      .then(function (res) {
+        btn.disabled = false; btn.textContent = 'Enviármelo por email';
+        if (!res.ok) { leadError((res.d && res.d.error) || 'No hemos podido enviarlo ahora mismo.'); return; }
+        var err = document.getElementById('lead-error');
+        if (err) err.remove();
+        leadStep.classList.add('enviado'); // oculta eyebrow+intro+form (CSS); NO borra el form
+        var ok = el('div', 'lead-ok');
+        ok.id = 'lead-gracias';
+        var nombreCorto = nombre.value.trim().split(' ')[0];
+        // Solo prometemos el email si el backend confirma que se ha entregado
+        var textoOk = res.d && res.d.entregado
+          ? '¡Gracias, ' + nombreCorto + '! Te enviamos la estimación a ' + email.value.trim() + '. Revisa también spam por si acaso.'
+          : '¡Gracias, ' + nombreCorto + '! Hemos recibido tu solicitud y te escribiremos muy pronto con la estimación.';
+        ok.appendChild(el('p', null, textoOk));
+        var acc = el('div', 'presu-acciones');
+        acc.style.justifyContent = 'center';
+        acc.appendChild(botonReiniciar());
+        ok.appendChild(acc);
+        leadStep.appendChild(ok);
+      })
+      .catch(function () { btn.disabled = false; btn.textContent = 'Enviármelo por email'; leadError('No hemos podido enviarlo ahora mismo.'); });
+  });
+
+  function leadError(msg) {
+    var prev = document.getElementById('lead-error');
+    if (prev) prev.remove();
+    var p = el('p', 'aviso', msg + ' También puedes escribirnos por WhatsApp.');
+    p.id = 'lead-error';
+    leadForm.insertBefore(p, leadForm.firstChild);
+  }
+})();
+</script>
+
+</body>
+</html>

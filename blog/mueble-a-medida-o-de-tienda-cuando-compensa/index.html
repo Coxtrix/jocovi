@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!-- GENERADO desde src/paginas/blog/mueble-a-medida-o-de-tienda-cuando-compensa/index.html — NO EDITAR A MANO: edita la fuente y ejecuta `node herramientas/construye.mjs` (desde webs/jocovi) -->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Comparativa honesta entre mueble a medida y mueble de tienda: precio real, duración, plazos y los casos donde el a medida gana por goleada (y donde no)." />
+<title>¿Mueble a medida o de tienda? Cuándo compensa cada uno | JOCOVI</title>
+<link rel="canonical" href="https://jocovi.es/blog/mueble-a-medida-o-de-tienda-cuando-compensa/" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:site_name" content="JOCOVI" />
+<meta property="og:title" content="¿Mueble a medida o de tienda? Cuándo compensa cada uno" />
+<meta property="og:description" content="Comparativa honesta entre mueble a medida y mueble de tienda: precio real, duración, plazos y los casos donde el a medida gana por goleada (y donde no)." />
+<meta property="og:url" content="https://jocovi.es/blog/mueble-a-medida-o-de-tienda-cuando-compensa/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#1C1714;
+    --bg-2:#241D18;
+    --panel:#F4EFE6;
+    --panel-2:#EDE4D4;
+    --cream:#EDE6D8;
+    --muted:#A79B87;
+    --gold:#C9A24B;
+    --gold-2:#BE833C;
+    --tan:#F3D395;
+    --brown:#3A2E1C;
+    --brown-2:#562B0C;
+    --wa:#008069;
+    --wa-bubble:#D9FDD3;
+    --line:rgba(201,162,75,.30);
+    /* Alphas del oro (única fuente del triplete 201,162,75; --line es la de .30) */
+    --gold-a12:rgba(201,162,75,.12);
+    --gold-a14:rgba(201,162,75,.14);
+    --gold-a15:rgba(201,162,75,.15);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;overflow-x:clip;}
+  body{font-family:'Jost',system-ui,sans-serif;font-weight:300;color:var(--brown);background:var(--panel);line-height:1.75;overflow-x:clip;}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.12;letter-spacing:.3px;color:var(--brown-2);}
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:760px;margin-inline:auto;padding-inline:28px;}
+  .eyebrow{font-weight:500;letter-spacing:4px;text-transform:uppercase;font-size:12px;color:var(--gold);}
+
+  header.site{position:sticky;top:0;z-index:50;background:rgba(28,23,20,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--gold-a14);}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0;max-width:1160px;margin-inline:auto;padding-inline:28px;}
+  .logo-img{height:54px;width:auto;display:block;border-radius:6px;}
+  .volver{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cream);font-weight:400;min-height:44px;display:inline-flex;align-items:center;transition:color .2s;}
+  .volver:hover{color:var(--gold);}
+
+  .migas{font-size:13px;color:#6f6353;font-weight:400;padding:26px 0 0;}
+  .migas ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px;}
+  .migas li+li::before{content:"›";margin-right:6px;color:var(--gold-2);}
+  .migas a{color:var(--gold-2);}
+  .migas a:hover{text-decoration:underline;}
+
+  article{padding:28px 0 70px;}
+  article h1{font-size:clamp(34px,5vw,52px);margin:10px 0 14px;text-wrap:balance;}
+  .post-meta{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-2);font-weight:500;margin-bottom:30px;}
+  article h2{font-size:clamp(26px,3.4vw,34px);margin:44px 0 14px;}
+  article h3{font-size:22px;margin:30px 0 10px;}
+  article p{margin:0 0 18px;font-weight:400;color:#4c4132;font-size:16.5px;text-wrap:pretty;}
+  article ul,article ol{margin:0 0 18px 22px;font-weight:400;color:#4c4132;font-size:16.5px;}
+  article li{margin-bottom:8px;}
+  article a{color:var(--gold-2);text-decoration:underline;}
+  article strong{color:var(--brown-2);font-weight:500;}
+  .tabla-scroll{overflow-x:auto;margin:0 0 18px;}
+  table{border-collapse:collapse;width:100%;font-size:15px;font-weight:400;color:#4c4132;}
+  th,td{border:1px solid rgba(86,43,12,.2);padding:10px 14px;text-align:left;}
+  th{background:var(--panel-2);color:var(--brown-2);font-family:'Jost';font-weight:500;letter-spacing:1px;text-transform:uppercase;font-size:12.5px;}
+
+  .nota{border-left:3px solid var(--gold);background:var(--panel-2);padding:16px 20px;margin:0 0 18px;font-size:15.5px;color:#4c4132;font-weight:400;}
+
+  .faq-post{margin-top:10px;}
+  .faq-post details{border-bottom:1px solid rgba(86,43,12,.16);}
+  .faq-post summary{cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:var(--brown-2);padding:16px 34px 16px 0;list-style:none;position:relative;min-height:44px;}
+  .faq-post summary::-webkit-details-marker{display:none;}
+  .faq-post summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);color:var(--gold-2);font-size:24px;font-family:'Jost';font-weight:300;}
+  .faq-post details[open] summary::after{content:"–";}
+
+  .cta-post{background:var(--bg-2);color:var(--cream);text-align:center;padding:70px 0;}
+  .cta-post h2{color:#fff;font-size:clamp(28px,3.8vw,42px);margin:8px 0 12px;}
+  .cta-post p{color:var(--muted);max-width:520px;margin:0 auto 26px;}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;padding:15px 30px;transition:all .2s;border:1px solid transparent;}
+  .btn-gold{background:var(--gold);color:#20180f;}
+  .btn-gold:hover{background:var(--tan);}
+  .btn-ghost{border-color:var(--gold);color:var(--gold);background:transparent;}
+  .btn-ghost:hover{background:var(--gold);color:#20180f;}
+  .cta-acciones{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+
+  footer.site{background:#15110e;color:var(--muted);padding:44px 0 30px;border-top:1px solid var(--gold-a12);text-align:center;}
+  footer.site small{font-size:12.5px;color:#7c705d;letter-spacing:.4px;}
+  footer.site a{color:var(--gold);}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "¿Mueble a medida o de tienda? Cuándo compensa cada uno",
+  "description": "Comparativa honesta entre mueble a medida y mueble de tienda: precio real, duración, plazos y los casos donde el a medida gana por goleada (y donde no).",
+  "datePublished": "2026-07-16",
+  "dateModified": "2026-07-16",
+  "inLanguage": "es",
+  "author": { "@type": "Organization", "name": "JOCOVI · Carpintería de madera", "url": "https://jocovi.es/" },
+  "publisher": { "@type": "Organization", "name": "JOCOVI · Carpintería de madera", "logo": { "@type": "ImageObject", "url": "https://jocovi.es/logo_jocovi.svg" } },
+  "mainEntityOfPage": "https://jocovi.es/blog/mueble-a-medida-o-de-tienda-cuando-compensa/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://jocovi.es/" },
+    { "@type": "ListItem", "position": 2, "name": "Consejos", "item": "https://jocovi.es/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "¿Mueble a medida o de tienda? La respuesta honesta de un carpintero" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto más caro es un mueble a medida?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Frente al mueble económico de gran superficie, bastante más — no compiten en lo mismo. Frente a la gama media-alta de tienda, la diferencia se estrecha mucho y a veces desaparece: por precios parecidos, el a medida da medidas exactas, materiales elegidos por ti y reparabilidad. La comparación justa es a igualdad de calidad." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hacéis solo el diseño, sin fabricación?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nuestro trabajo es el conjunto: pensamos el mueble contigo, lo fabricamos en el taller y lo instalamos. El diseño a secas, sin fabricar, no es un servicio que ofrezcamos — el valor está justo en que quien lo diseña es quien lo va a construir." }
+    }
+  ]
+}
+</script>
+<script defer src="https://metricas.31-97-108-89.sslip.io/script.js" data-website-id="acb4d131-0008-4ca6-a2e7-b91249b85a1e"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="../../index.html" aria-label="JOCOVI, volver al inicio"><img class="logo-img" src="../../logo_jocovi.svg" alt="JOCOVI · Carpintería de madera" /></a>
+    <a class="volver" href="../index.html">← Todos los consejos</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="migas" aria-label="Migas de pan">
+      <ol>
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="../index.html">Consejos</a></li>
+        <li aria-current="page">A medida o de tienda</li>
+      </ol>
+    </nav>
+
+    <article>
+      <span class="eyebrow">Muebles</span>
+      <h1>¿Mueble a medida o de tienda? La respuesta honesta de un carpintero</h1>
+      <p class="post-meta">Julio 2026 · Taller JOCOVI, Alcalá de Guadaíra</p>
+
+      <p>Te lo dice un taller que vive de lo contrario: <strong>hay casos en los que el mueble a medida no te compensa</strong>. Si tu espacio es estándar, tu necesidad es estándar y el presupuesto va justo, el mueble de tienda es una compra razonable. El <strong>mueble a medida o comprado</strong> deja de ser un empate en cuanto aparece una de estas tres cosas: un hueco que no es de catálogo, un uso intensivo a largo plazo, o la calidad como criterio. Vamos con la comparativa sin trampas.</p>
+
+      <h2>Mueble a medida o de tienda: la comparativa sin trampas</h2>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr><th>&nbsp;</th><th>De tienda</th><th>A medida</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Precio inicial</strong></td><td>Menor (gama económica)</td><td>Mayor; similar frente a gama media-alta</td></tr>
+            <tr><td><strong>Plazo</strong></td><td>Días</td><td>Semanas (se fabrica para ti)</td></tr>
+            <tr><td><strong>Ajuste al espacio</strong></td><td>El módulo más cercano; quedan huecos</td><td>Milímetro a milímetro</td></tr>
+            <tr><td><strong>Materiales</strong></td><td>Los del catálogo</td><td>Los eliges tú, pieza a pieza</td></tr>
+            <tr><td><strong>Duración típica</strong></td><td>Años (según gama)</td><td>Décadas</td></tr>
+            <tr><td><strong>Reparabilidad</strong></td><td>Baja: se sustituye</td><td>Alta: se repara y reacaba</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Cuándo NO te compensa el a medida</h2>
+      <p>De verdad, no siempre compensa — y preferimos decirlo aquí a que lo descubras pagando:</p>
+      <ul>
+        <li><strong>Espacio estándar + necesidad estándar:</strong> una estantería suelta en una pared lisa, un mueble que quizá muevas en dos años. Cómpralo hecho.</li>
+        <li><strong>Presupuesto muy justo:</strong> un a medida "recortado" hasta abaratarlo pierde justo lo que lo hacía valioso. Mejor un buen mueble de tienda que un mal mueble a medida.</li>
+        <li><strong>Vivienda temporal o de alquiler:</strong> el a medida se queda; su valor es del hueco, no tuyo.</li>
+      </ul>
+
+      <h2>Cuándo compensa casi siempre</h2>
+      <ul>
+        <li><strong>Huecos que no son de catálogo:</strong> esquinas, pilares, bajo escalera, paredes desplomadas. El módulo estándar desperdicia justo los centímetros que importan.</li>
+        <li><strong>Muebles que trabajan a diario durante décadas:</strong> el armario del dormitorio principal, el mueble del salón. Ahí la duración y la reparabilidad cambian la cuenta.</li>
+        <li><strong>Cuando quieres decidir tú la calidad:</strong> qué tablero, qué herraje, qué acabado. En tienda eliges entre lo que hay; en el taller, entre lo que existe — la diferencia real entre materiales la contamos en <a href="../melamina-chapado-o-madera-maciza-armario/index.html">melamina, chapado o madera maciza</a>.</li>
+      </ul>
+
+      <h2>El coste real a 15 años</h2>
+      <p>El precio de compra es la mitad de la cuenta. Un mueble económico de tienda que se vence a los 6-8 años se compra dos veces en 15; un mueble a medida bien construido sigue ahí, y si una guía falla o un canto se golpea, <strong>se repara</strong> — esa es la palabra que casi nunca aparece en la comparación. A igualdad de periodo, el "caro" y el "barato" acaban mucho más cerca de lo que parecía en la etiqueta, y uno de los dos lleva quince años cerrando bien.</p>
+      <p>Un ejemplo con números redondos para verlo: un armario de tienda de 600 € que se sustituye a los 7-8 años son 1.200 € en 15, más dos montajes y dos mudanzas de ropa. Un a medida de 1.400 € en ese mismo hueco sigue instalado al año 15, con una visita de ajuste por el camino. La diferencia real acabó siendo pequeña — y solo uno de los dos aprovechaba el hueco entero desde el primer día.</p>
+
+      <div class="nota"><strong>Consejo de carpintero:</strong> si dudas, haz esta prueba: mide tu hueco y busca el módulo de tienda que mejor encaje. Si el ajuste te deja menos de 5 cm perdidos y no hay zócalos ni desplomes raros, la tienda es una opción digna. Si te salen 15 cm muertos o hay que "disimular" con tapas y cartón-pluma, ya sabes la respuesta — estás pagando por metros que no puedes usar.</div>
+
+      <h2>De la duda al número</h2>
+      <p>Lo que hacemos y cómo lo hacemos lo tienes en <a href="../../index.html#servicios">muebles a medida</a>. Y para pasar de la filosofía al presupuesto: <a href="../../index.html#presupuesto">calcula tu presupuesto online</a> — cuéntale tu mueble con tus palabras y te da una horquilla orientativa al momento, sin compromiso.</p>
+
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq-post">
+        <details>
+          <summary>¿Cuánto más caro es un mueble a medida?</summary>
+          <p>Frente al mueble económico de gran superficie, bastante más — no compiten en lo mismo. Frente a la gama media-alta de tienda, la diferencia se estrecha mucho y a veces desaparece: por precios parecidos, el a medida da medidas exactas, materiales elegidos por ti y reparabilidad. La comparación justa es a igualdad de calidad.</p>
+        </details>
+        <details>
+          <summary>¿Hacéis solo el diseño, sin fabricación?</summary>
+          <p>Nuestro trabajo es el conjunto: pensamos el mueble contigo, lo fabricamos en el taller y lo instalamos. El diseño a secas, sin fabricar, no es un servicio que ofrezcamos — el valor está justo en que quien lo diseña es quien lo va a construir.</p>
+        </details>
+      </div>
+    </article>
+  </div>
+
+  <section class="cta-post">
+    <div class="wrap">
+      <span class="eyebrow">¿Y tu proyecto?</span>
+      <h2>Calcula tu presupuesto en un minuto</h2>
+      <p>Cuéntanos qué necesitas con tus palabras y te damos una horquilla orientativa al momento. Sin compromiso y sin dejar tus datos.</p>
+      <div class="cta-acciones">
+        <a class="btn btn-gold" href="../../index.html#presupuesto">Calcular mi presupuesto</a>
+        <a class="btn btn-ghost" href="../../index.html#contacto">Hablar con Jorge</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <small>© 2026 JOCOVI · Jorge Coco Villalba · Carpintería de madera en Alcalá de Guadaíra (Sevilla) · <a href="../../index.html">jocovi.es</a></small>
+  </div>
+</footer>
+
+</body>
+</html>

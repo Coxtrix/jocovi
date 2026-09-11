@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- GENERADO desde src/paginas/privacidad/index.html — NO EDITAR A MANO: edita la fuente y ejecuta `node herramientas/construye.mjs` (desde webs/jocovi) -->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Política de privacidad de JOCOVI: qué datos tratamos, con qué finalidad y base jurídica, plazos, destinatarios y cómo ejercer tus derechos (RGPD y LOPDGDD)." />
+<title>Política de privacidad | JOCOVI</title>
+<link rel="canonical" href="https://jocovi.es/privacidad/" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:site_name" content="JOCOVI" />
+<meta property="og:title" content="Política de privacidad | JOCOVI" />
+<meta property="og:description" content="Qué datos tratamos, con qué finalidad, durante cuánto tiempo y cómo ejercer tus derechos." />
+<meta property="og:url" content="https://jocovi.es/privacidad/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#1C1714;
+    --bg-2:#241D18;
+    --panel:#F4EFE6;
+    --panel-2:#EDE4D4;
+    --cream:#EDE6D8;
+    --muted:#A79B87;
+    --gold:#C9A24B;
+    --gold-2:#BE833C;
+    --tan:#F3D395;
+    --brown:#3A2E1C;
+    --brown-2:#562B0C;
+    --wa:#008069;
+    --wa-bubble:#D9FDD3;
+    --line:rgba(201,162,75,.30);
+    /* Alphas del oro (única fuente del triplete 201,162,75; --line es la de .30) */
+    --gold-a12:rgba(201,162,75,.12);
+    --gold-a14:rgba(201,162,75,.14);
+    --gold-a15:rgba(201,162,75,.15);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;overflow-x:clip;}
+  body{font-family:'Jost',system-ui,sans-serif;font-weight:300;color:var(--brown);background:var(--panel);line-height:1.75;overflow-x:clip;}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.12;letter-spacing:.3px;color:var(--brown-2);}
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:760px;margin-inline:auto;padding-inline:28px;}
+
+  header.site{position:sticky;top:0;z-index:50;background:rgba(28,23,20,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--gold-a14);}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0;max-width:1160px;margin-inline:auto;padding-inline:28px;}
+  .logo-img{height:54px;width:auto;display:block;border-radius:6px;}
+  .volver{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cream);font-weight:400;min-height:44px;display:inline-flex;align-items:center;transition:color .2s;}
+  .volver:hover{color:var(--gold);}
+
+  .migas{font-size:13px;color:#6f6353;font-weight:400;padding:26px 0 0;}
+  .migas ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px;}
+  .migas li+li::before{content:"›";margin-right:6px;color:var(--gold-2);}
+  .migas a{color:var(--gold-2);}
+  .migas a:hover{text-decoration:underline;}
+
+  article{padding:20px 0 70px;}
+  article h1{font-size:clamp(34px,5vw,52px);margin:10px 0 8px;text-wrap:balance;}
+  .actualizado{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-2);font-weight:500;margin-bottom:28px;}
+  article h2{font-size:clamp(24px,3.2vw,32px);margin:40px 0 12px;}
+  article h3{font-size:20px;margin:26px 0 8px;}
+  article p{margin:0 0 16px;font-weight:400;color:#4c4132;font-size:16.5px;text-wrap:pretty;}
+  article ul{margin:0 0 16px 22px;font-weight:400;color:#4c4132;font-size:16.5px;}
+  article li{margin-bottom:7px;}
+  article a{color:var(--gold-2);text-decoration:underline;}
+  article strong{color:var(--brown-2);font-weight:500;}
+  .datos{border-left:3px solid var(--gold);background:var(--panel-2);padding:18px 22px;margin:0 0 16px;font-size:16px;color:#4c4132;font-weight:400;}
+  .datos p{margin:0 0 4px;}
+  .tabla-scroll{overflow-x:auto;margin:0 0 18px;}
+  table{border-collapse:collapse;width:100%;font-size:15px;font-weight:400;color:#4c4132;}
+  th,td{border:1px solid rgba(86,43,12,.2);padding:10px 14px;text-align:left;vertical-align:top;}
+  th{background:var(--panel-2);color:var(--brown-2);font-family:'Jost';font-weight:500;letter-spacing:1px;text-transform:uppercase;font-size:12.5px;}
+
+  footer.site{background:#15110e;color:var(--muted);padding:44px 0 30px;border-top:1px solid var(--gold-a12);text-align:center;}
+  .foot-links{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;}
+  .foot-links a{color:var(--cream);min-height:40px;display:inline-flex;align-items:center;}
+  .foot-links a:hover{color:var(--gold);}
+  footer.site small{font-size:12.5px;color:#7c705d;letter-spacing:.4px;}
+</style>
+<script defer src="https://metricas.31-97-108-89.sslip.io/script.js" data-website-id="acb4d131-0008-4ca6-a2e7-b91249b85a1e"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="../index.html" aria-label="JOCOVI, inicio"><img class="logo-img" src="../logo_jocovi.svg" alt="JOCOVI · Carpintería de madera" /></a>
+    <a class="volver" href="../index.html">‹ Volver al inicio</a>
+  </div>
+</header>
+
+<nav class="wrap migas" aria-label="Migas de pan">
+  <ol>
+    <li><a href="../index.html">Inicio</a></li>
+    <li>Política de privacidad</li>
+  </ol>
+</nav>
+
+<main class="wrap">
+  <article>
+    <h1>Política de privacidad</h1>
+    <p class="actualizado">Última actualización: 21 de julio de 2026</p>
+
+    <p>En JOCOVI respetamos tu privacidad y tratamos tus datos con transparencia, conforme al Reglamento (UE) 2016/679 (RGPD) y a la Ley Orgánica 3/2018 (LOPDGDD). Esta política explica qué datos tratamos, para qué, con qué base legal, durante cuánto tiempo, con quién los compartimos y cómo puedes ejercer tus derechos.</p>
+
+    <h2>1. Responsable del tratamiento</h2>
+    <div class="datos">
+      <p><strong>Responsable:</strong> Jorge Coco Villalba (JOCOVI)</p>
+      <p><strong>NIF:</strong> 28592369B</p>
+      <p><strong>Domicilio:</strong> C/ Amistad 24, 41500 Alcalá de Guadaíra (Sevilla), España</p>
+      <p><strong>Correo electrónico:</strong> info@jocovi.es</p>
+    </div>
+
+    <h2>2. Qué datos tratamos y con qué finalidad</h2>
+
+    <h3>a) Calculadora de presupuesto</h3>
+    <p>Para darte una estimación orientativa, escribes una descripción libre del trabajo que necesitas. <strong>La calculadora no te pide nombre, teléfono ni correo</strong>, y te recomendamos <strong>no incluir datos personales</strong> en esa descripción. El texto se procesa automáticamente para interpretarlo y devolverte una horquilla de precio.</p>
+    <p>No conservamos la descripción que escribes. Únicamente guardamos un <strong>registro anónimo</strong> del resultado (el tipo de trabajo detectado, el rango de precio y un código de referencia), sin datos que permitan identificarte, con fines estadísticos y para poder relacionar tu referencia si después nos escribes.</p>
+
+    <h3>b) Prevención de abuso y seguridad</h3>
+    <p>Para evitar usos abusivos de la calculadora (spam, sobrecarga), limitamos el número de peticiones. Con ese único fin tratamos tu dirección IP, que <strong>nunca se almacena en claro</strong>: se guarda un valor cifrado (hash con sal) de forma temporal y se elimina automáticamente a diario.</p>
+
+    <h3>c) Contacto (WhatsApp o correo)</h3>
+    <p>Si decides contactarnos por WhatsApp o por correo electrónico, tratamos los datos que nos facilites (por ejemplo, tu número, tu nombre o los detalles de tu proyecto) para atender tu consulta y preparar, en su caso, un presupuesto sin compromiso.</p>
+
+    <h3>d) Recibir la estimación por email</h3>
+    <p>Al final de la calculadora, y solo si tú lo eliges, puedes pedir que te enviemos la estimación por correo. En ese caso tratamos el <strong>nombre</strong>, el <strong>correo electrónico</strong> y, opcionalmente, el <strong>teléfono</strong> que nos facilitas, junto con el resumen del trabajo y el rango de precio calculado. Los usamos para <strong>enviarte esa estimación</strong> y para <strong>ponernos en contacto contigo en relación con tu solicitud</strong> (aclarar dudas y, si quieres, concretar una visita para el presupuesto en firme). Este paso es <strong>voluntario</strong>: la estimación se muestra en pantalla sin necesidad de dejar ningún dato.</p>
+
+    <h3>e) Mensaje de voz (opcional)</h3>
+    <p>Si prefieres describir el trabajo hablando en vez de escribir, puedes grabar un audio. Ese audio se envía a un proveedor de transcripción que lo convierte en texto para rellenar la descripción; <strong>no conservamos la grabación</strong>: se transcribe y se descarta. El texto resultante recibe el mismo tratamiento que si lo hubieras escrito tú.</p>
+
+    <h2>3. Base jurídica</h2>
+    <ul>
+      <li><strong>Ejecución de medidas precontractuales</strong> a petición tuya (art. 6.1.b RGPD): preparar la estimación y el presupuesto que solicitas.</li>
+      <li><strong>Interés legítimo</strong> (art. 6.1.f RGPD): garantizar la seguridad del sitio y prevenir el abuso (limitación de peticiones).</li>
+      <li><strong>Consentimiento</strong> (art. 6.1.a RGPD): cuando nos escribes voluntariamente por WhatsApp o correo, cuando nos facilitas tus datos para <strong>recibir la estimación por email</strong> (marcando la casilla correspondiente) y cuando envías un <strong>mensaje de voz</strong> para transcribirlo. Puedes retirar el consentimiento en cualquier momento, sin que ello afecte a la licitud del tratamiento previo.</li>
+    </ul>
+
+    <h2>4. Durante cuánto tiempo conservamos los datos</h2>
+    <ul>
+      <li>La descripción de la calculadora <strong>no se conserva</strong>; el registro anónimo del resultado no permite identificarte.</li>
+      <li>El valor cifrado de la IP se elimina <strong>automáticamente a diario</strong>.</li>
+      <li>Los datos que facilitas para <strong>recibir la estimación por email</strong> (nombre, correo, teléfono, resumen y rango) se conservan mientras gestionamos tu solicitud y, si no llega a haber relación comercial, se suprimen en un plazo razonable; si contratas, durante la relación y los plazos legales aplicables.</li>
+      <li>El <strong>audio</strong> del mensaje de voz <strong>no se conserva</strong>: se transcribe y se descarta.</li>
+      <li>Las comunicaciones de contacto se conservan mientras dure la relación y, después, durante los plazos legales aplicables; luego se suprimen o se anonimizan.</li>
+    </ul>
+
+    <h2>5. Destinatarios y encargados del tratamiento</h2>
+    <p>No vendemos tus datos ni los cedemos a terceros, salvo obligación legal. Para prestar el servicio nos apoyamos en proveedores que actúan como encargados del tratamiento:</p>
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr><th>Proveedor</th><th>Finalidad</th><th>Ubicación</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Anthropic PBC (Claude)</td><td>Interpretar automáticamente el texto de la calculadora para generar la estimación</td><td>EE. UU.</td></tr>
+          <tr><td>OpenAI (Whisper)</td><td>Transcribir a texto el mensaje de voz, solo si decides enviar un audio</td><td>EE. UU.</td></tr>
+          <tr><td>Hostinger</td><td>Alojamiento (hosting) del sitio web</td><td>Unión Europea</td></tr>
+          <tr><td>Google (Gmail)</td><td>Envío del correo con tu estimación y gestión del aviso interno, solo si pides recibirla por email</td><td>EE. UU.</td></tr>
+          <tr><td>Google (Google Fonts)</td><td>Tipografías del sitio; al cargarlas, tu navegador conecta con servidores de Google, que puede recibir tu dirección IP</td><td>EE. UU.</td></tr>
+          <tr><td>Meta Platforms (WhatsApp)</td><td>Canal de contacto, solo si decides escribirnos por WhatsApp</td><td>EE. UU. / Irlanda</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>6. Transferencias internacionales</h2>
+    <p>Algunos de los proveedores anteriores (Anthropic, OpenAI, Google y Meta) están ubicados fuera del Espacio Económico Europeo. Dichas transferencias se amparan en las garantías previstas por el RGPD (por ejemplo, cláusulas contractuales tipo de la Comisión Europea o marcos de adecuación aplicables al proveedor).</p>
+
+    <h2>7. Tus derechos</h2>
+    <p>Puedes ejercer en cualquier momento tus derechos de <strong>acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad</strong>, así como retirar el consentimiento prestado. Para ello, escríbenos a <strong>info@jocovi.es</strong> o por correo postal a la dirección indicada en el apartado 1, identificándote adecuadamente.</p>
+    <p>Si consideras que no hemos atendido correctamente tus derechos, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
+
+    <h2>8. Cookies</h2>
+    <p>Este sitio <strong>no utiliza cookies propias de analítica ni de publicidad</strong>, ni realiza seguimiento de tu navegación. La carga de las tipografías desde Google Fonts no instala cookies, aunque implica una conexión a los servidores de Google (apartado 5). Si en el futuro incorporamos herramientas que utilicen cookies o análisis de tráfico, lo indicaremos y recabaremos tu consentimiento cuando sea necesario, actualizando esta política.</p>
+
+    <h2>9. Seguridad</h2>
+    <p>Aplicamos medidas técnicas y organizativas razonables para proteger tus datos: conexión cifrada (HTTPS), no almacenamiento de la descripción de la calculadora y cifrado de la dirección IP.</p>
+
+    <h2>10. Menores</h2>
+    <p>Este sitio y sus servicios están dirigidos a personas mayores de edad. No recabamos conscientemente datos de menores.</p>
+
+    <h2>11. Cambios en esta política</h2>
+    <p>Podemos actualizar esta política para adaptarla a cambios normativos o del servicio. La versión vigente es la publicada en esta página, con su fecha de última actualización.</p>
+  </article>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot-links" aria-label="Pie">
+      <a href="../index.html">Inicio</a>
+      <a href="../index.html#contacto">Contacto</a>
+      <a href="../aviso-legal/index.html">Aviso legal</a>
+    </nav>
+    <small>© 2026 JOCOVI · Jorge Coco Villalba · Carpintería de madera en Alcalá de Guadaíra (Sevilla)</small>
+  </div>
+</footer>
+
+</body>
+</html>

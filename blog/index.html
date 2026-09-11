@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- GENERADO desde src/paginas/blog/index.html — NO EDITAR A MANO: edita la fuente y ejecuta `node herramientas/construye.mjs` (desde webs/jocovi) -->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Consejos de carpintería a medida: precios de armarios empotrados y vestidores, materiales, acabados y guías honestas del taller de JOCOVI en Sevilla." />
+<title>Consejos de carpintería a medida | Blog de JOCOVI · Sevilla</title>
+<link rel="canonical" href="https://jocovi.es/blog/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#1C1714;
+    --bg-2:#241D18;
+    --panel:#F4EFE6;
+    --panel-2:#EDE4D4;
+    --cream:#EDE6D8;
+    --muted:#A79B87;
+    --gold:#C9A24B;
+    --gold-2:#BE833C;
+    --tan:#F3D395;
+    --brown:#3A2E1C;
+    --brown-2:#562B0C;
+    --wa:#008069;
+    --wa-bubble:#D9FDD3;
+    --line:rgba(201,162,75,.30);
+    /* Alphas del oro (única fuente del triplete 201,162,75; --line es la de .30) */
+    --gold-a12:rgba(201,162,75,.12);
+    --gold-a14:rgba(201,162,75,.14);
+    --gold-a15:rgba(201,162,75,.15);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;overflow-x:clip;}
+  body{font-family:'Jost',system-ui,sans-serif;font-weight:300;color:var(--cream);background:var(--bg);line-height:1.7;overflow-x:clip;}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.08;letter-spacing:.3px;}
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1160px;margin-inline:auto;padding-inline:28px;}
+  .eyebrow{font-weight:500;letter-spacing:4px;text-transform:uppercase;font-size:12px;color:var(--gold);}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;padding:15px 30px;transition:all .2s;border:1px solid transparent;cursor:pointer;}
+  .btn-gold{background:var(--gold);color:#20180f;}
+  .btn-gold:hover{background:var(--tan);}
+  .btn-ghost{border-color:var(--gold);color:var(--gold);background:transparent;}
+  .btn-ghost:hover{background:var(--gold);color:#20180f;}
+
+  header.site{position:sticky;top:0;z-index:50;background:rgba(28,23,20,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--gold-a14);}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0;}
+  .logo-img{height:54px;width:auto;display:block;border-radius:6px;}
+  .volver{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cream);font-weight:400;transition:color .2s;min-height:44px;display:inline-flex;align-items:center;}
+  .volver:hover{color:var(--gold);}
+
+  .hero-blog{padding:90px 0 70px;text-align:center;}
+  .hero-blog h1{font-size:clamp(38px,5.5vw,64px);color:#fff;margin:14px 0 8px;}
+  .hero-blog p{font-size:18px;color:var(--muted);max-width:640px;margin:14px auto 0;}
+  .orn{display:flex;align-items:center;justify-content:center;gap:14px;margin:22px 0;}
+  .orn::before,.orn::after{content:"";height:1px;width:56px;background:var(--line);}
+  .orn i{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);display:block;}
+
+  .light{background:var(--panel);color:var(--brown);padding:90px 0;}
+  .light h2{color:var(--brown-2);font-size:clamp(28px,3.6vw,42px);margin-bottom:8px;}
+  .light .muted{color:#6f6353;font-weight:400;}
+
+  /* Listado de posts publicados (vacío de momento) */
+  .post-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:34px;}
+  .post-card{border:1px solid rgba(86,43,12,.16);padding:30px 28px;background:var(--panel);transition:background .2s;display:block;}
+  .post-card:hover{background:var(--panel-2);}
+  .post-card .fecha{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-2);font-weight:500;}
+  .post-card h3{font-size:26px;color:var(--brown-2);margin:10px 0 8px;}
+  .post-card p{color:#6f6353;font-weight:400;font-size:15px;}
+  .post-card .leer{display:inline-block;margin-top:14px;color:var(--gold-2);font-size:13px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;}
+
+  /* Temas en preparación */
+  .proximos{margin-top:14px;column-gap:40px;}
+  .proximos li{color:#6f6353;font-weight:400;font-size:15.5px;padding:8px 0;border-bottom:1px solid rgba(86,43,12,.12);list-style:none;display:flex;gap:12px;align-items:baseline;}
+  .proximos li::before{content:"";width:7px;height:7px;background:var(--gold-2);transform:rotate(45deg);flex:none;position:relative;top:-1px;}
+  @media (min-width:760px){ .proximos{columns:2;} .proximos li{break-inside:avoid;} }
+
+  .cta-final{padding:90px 0;text-align:center;background:var(--bg-2);}
+  .cta-final h2{font-size:clamp(30px,4vw,48px);color:#fff;margin-bottom:12px;}
+  .cta-final p{color:var(--muted);max-width:520px;margin:0 auto 28px;}
+  .cta-acciones{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+
+  footer.site{background:#15110e;color:var(--muted);padding:44px 0 30px;border-top:1px solid var(--gold-a12);text-align:center;}
+  footer.site small{font-size:12.5px;color:#7c705d;letter-spacing:.4px;}
+  footer.site a{color:var(--gold);}
+</style>
+<script defer src="https://metricas.31-97-108-89.sslip.io/script.js" data-website-id="acb4d131-0008-4ca6-a2e7-b91249b85a1e"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="../index.html" aria-label="JOCOVI, volver al inicio"><img class="logo-img" src="../logo_jocovi.svg" alt="JOCOVI · Carpintería de madera" /></a>
+    <a class="volver" href="../index.html">← Volver a la web</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero-blog">
+    <div class="wrap">
+      <span class="eyebrow">El blog del taller</span>
+      <h1>Consejos de carpintería a medida</h1>
+      <div class="orn"><i></i></div>
+      <p>Guías honestas sobre armarios empotrados, vestidores, muebles y puertas: precios reales, materiales y lo que aprendemos cada día en el taller de Alcalá de Guadaíra.</p>
+    </div>
+  </section>
+
+  <section class="light">
+    <div class="wrap">
+      <h2>Artículos</h2>
+
+      <!-- POSTS PUBLICADOS: una tarjeta por post, la más reciente primero. -->
+      <div class="post-grid">
+        <a class="post-card" href="cuanto-cuesta-armario-empotrado-a-medida-sevilla/index.html">
+          <span class="fecha">Julio 2026</span>
+          <h3>¿Cuánto cuesta un armario empotrado a medida en Sevilla?</h3>
+          <p>Rangos de precio reales, qué los hace variar y cómo calcular el tuyo online en un minuto.</p>
+          <span class="leer">Leer la guía →</span>
+        </a>
+        <a class="post-card" href="melamina-chapado-o-madera-maciza-armario/index.html">
+          <span class="fecha">Julio 2026</span>
+          <h3>¿Melamina, chapado o madera maciza?</h3>
+          <p>Diferencias reales entre los tres materiales, cuándo conviene cada uno y la combinación que solemos recomendar.</p>
+          <span class="leer">Leer la guía →</span>
+        </a>
+        <a class="post-card" href="puertas-correderas-o-abatibles-armario/index.html">
+          <span class="fecha">Julio 2026</span>
+          <h3>¿Puertas correderas o abatibles para tu armario?</h3>
+          <p>Comparativa honesta: espacio, precio, herrajes y los errores que más vemos en el taller.</p>
+          <span class="leer">Leer la guía →</span>
+        </a>
+        <a class="post-card" href="cuanto-cuesta-vestidor-a-medida/index.html">
+          <span class="fecha">Julio 2026</span>
+          <h3>¿Cuánto cuesta un vestidor a medida?</h3>
+          <p>Los tres rangos de precio reales, qué encarece de verdad y cuándo te compensa más un buen armario.</p>
+          <span class="leer">Leer la guía →</span>
+        </a>
+        <a class="post-card" href="armarios-huecos-dificiles-bajo-escalera-buhardilla/index.html">
+          <span class="fecha">Julio 2026</span>
+          <h3>Armarios en huecos difíciles: bajo escalera y buhardillas</h3>
+          <p>Soluciones de carpintería para los huecos que ningún mueble de tienda resuelve: escaleras, pilares y rincones.</p>
+          <span class="leer">Leer la guía →</span>
+        </a>
+        <a class="post-card" href="precio-cambiar-puertas-de-paso-casa/index.html">
+          <span class="fecha">Julio 2026</span>
+          <h3>Cambiar las puertas de casa: precio y letra pequeña</h3>
+          <p>Precio por puerta instalada y qué debe incluir un presupuesto serio para que no haya sorpresas.</p>
+          <span class="leer">Leer la guía →</span>
+        </a>
+        <a class="post-card" href="frentes-de-armario-renovar-sin-obra/index.html">
+          <span class="fecha">Julio 2026</span>
+          <h3>Frentes de armario: estrena armario sin obra</h3>
+          <p>Cambiar solo las puertas del armario: cuándo compensa, tipos de frente y precio orientativo.</p>
+          <span class="leer">Leer la guía →</span>
+        </a>
+        <a class="post-card" href="interiores-de-armario-cajoneras-zapateros-altillos/index.html">
+          <span class="fecha">Julio 2026</span>
+          <h3>Interiores de armario bien pensados</h3>
+          <p>Alturas que funcionan, cajoneras, zapateros y altillos — y los errores de distribución más comunes.</p>
+          <span class="leer">Leer la guía →</span>
+        </a>
+        <a class="post-card" href="mueble-a-medida-o-de-tienda-cuando-compensa/index.html">
+          <span class="fecha">Julio 2026</span>
+          <h3>¿Mueble a medida o de tienda?</h3>
+          <p>La respuesta honesta de un carpintero: cuándo compensa cada uno, con números y sin trampas.</p>
+          <span class="leer">Leer la guía →</span>
+        </a>
+        <a class="post-card" href="lacado-o-barnizado-muebles-puertas/index.html">
+          <span class="fecha">Julio 2026</span>
+          <h3>¿Lacado o barnizado?</h3>
+          <p>La laca cubre, el barniz enseña la veta: qué acabado le va a tus puertas y muebles, y cómo se cuida cada uno.</p>
+          <span class="leer">Leer la guía →</span>
+        </a>
+        <a class="post-card" href="librerias-muebles-salon-a-medida-ideas/index.html">
+          <span class="fecha">Julio 2026</span>
+          <h3>Librerías y muebles de salón a medida</h3>
+          <p>Ideas reales: pared completa, mueble de TV integrado, salvar radiadores y pilares — y lo que cuestan.</p>
+          <span class="leer">Leer la guía →</span>
+        </a>
+      </div>
+
+      <p class="muted" style="margin-top:40px;">En preparación:</p>
+      <ul class="proximos">
+        <li>Así trabajamos un armario a medida, de la visita a la instalación</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="wrap">
+      <span class="eyebrow">Mientras tanto</span>
+      <h2>¿Tienes ya un proyecto en mente?</h2>
+      <p>Calcula una horquilla de precio en un minuto con nuestra calculadora online, o cuéntanoslo directamente por WhatsApp.</p>
+      <div class="cta-acciones">
+        <a class="btn btn-gold" href="../index.html#presupuesto">Calcular mi presupuesto</a>
+        <a class="btn btn-ghost" href="../index.html#contacto">Contactar</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <small>© 2026 JOCOVI · Jorge Coco Villalba · Carpintería de madera en Alcalá de Guadaíra (Sevilla) · <a href="../index.html">jocovi.es</a></small>
+  </div>
+</footer>
+
+</body>
+</html>
